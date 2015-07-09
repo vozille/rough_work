@@ -1,0 +1,1204 @@
+___________________________________________
+At the bottom as usual, feels bad man ( ‾ʖ̫‾)( ‾ʖ̫‾)
+
+By : 
+09-07-2015
+
+Note:
+Forgot roll pattern of LE students, please someone say that
+
+FORMAT:
+
+RANK - NAME - ROLL - GRADE
+____________________________________________
+
+
+MECHANICAL ENGINEERING :
+_____________________________________________________
+
+1       POOJA BHAGAT               1301106432      9.12
+
+1       SIDDHARTH GOUTAM           1301106443      9.12
+
+1       RAKESH ROSHAN DASH         1301106499      9.12
+
+4       SAI PRAJNA NAYAK           1301106106      9.00
+
+5       HIMESH CHACHRA             1301106026      8.96
+
+5       ANKITA MOHANTY             1301106253      8.96
+
+5       PALLAVI SAHA               1301106016      8.96
+
+8       SHASHWATA SAHOO            1301106602      8.88
+
+9       DIBYA RANJAN SWAIN         1301106173      8.81
+
+9       VISHAL SINGH               1301106285      8.81
+
+11      PRABHUDUTTA SAHOO          1301106186      8.73
+
+11      PRAVANJAN PADHIHARI        1301106239      8.73
+
+11      PRATIKSHYA PRIYADARSHINI   1301106570      8.73
+
+14      ONKAR MOHAPATRA            1301106188      8.69
+
+15      ASHISH RANJAN SAHU         1301106174      8.65
+
+15      MANISH BEHERA              1301106247      8.65
+
+17      VISHANK PANIGRAHY          1301106100      8.62
+
+17      K SAIRAJ ACHARY            1301106298      8.62
+
+17      SWAGAT KUMAR MAHAPATRA     1301106442      8.62
+
+17      MOHD IMRAN                 1301106576      8.62
+
+21      TANMAY DASH                1301106599      8.58
+
+22      DEEPTANEEL BHATTACHARYA    1301106107      8.54
+
+22      RUTUPARNA SAHU             1301106089      8.54
+
+22      KAMLESH NAYAK              1301106059      8.54
+
+22      AYAN GHOSH                 1301106367      8.54
+
+26      PUNYA SLOKA DASH           1301106008      8.46
+
+26      SWATISMITA PANDA           1301106019      8.46
+
+28      VIGNESH SAI                1301106472      8.42
+
+29      SOURAV BANSAL              1301106192      8.38
+
+29      PRITHV SINGH PRADHAN       1301106111      8.38
+
+31      RAMESH KUMAR CHOURASIA     1301106481      8.35
+
+32      SOUMIK RATH                1301106255      8.27
+
+33      SHREYASH MISHRA            1301106500      8.23
+
+33      ABHISHEK MANSINGH          1301106600      8.23
+
+35      MINAL MISHRA               1301106601      8.12
+
+36      AKASH MAHANTA              1301106307      8.08
+
+36      NIKHANJ SOUMYA RATAN       1301106144      8.08
+
+36      DURGAPRASAD SAHOO          1301106439      8.08
+
+36      SOMIA SAROJ TRIPATHY       1301106546      8.08
+
+40      PURU JAIN                  1301106265      8.04
+
+40      DIGVIJAYA SATAPATHY        1301106140      8.04
+
+42      SACHIN PAN                 1301106582      7.96
+
+43      CHETANA NAYAK              1301106052      7.92
+
+44      ALOK KUMAR NAYAK           1301106299      7.88
+
+44      ARPITA CHOUDHURY           1301106067      7.88
+
+44      SANDEEP KUMAR SENAPATI     1301106597      7.88
+
+47      NIKITA ROUT                1301106310      7.85
+
+47      DIVYA JEEVAN MOHARANA      1301106540      7.85
+
+49      KHITIJA ACHARYA            1301106171      7.81
+
+50      SUSHREE PRIYANKA SETHY     1301106231      7.77
+
+50      AISWARYA SAMANTARAY        1301106554      7.77
+
+50      RAMYA ANWESHA              1301106077      7.77
+
+53      GOUTAM BEHERA              1301106381      7.69
+
+53      PAYAL ROUT                 1301106286      7.69
+
+55      BANAMALI SETHY             1301106313      7.65
+
+55      SHANKARSHAN MURMU          1301106434      7.65
+
+55      NIMISH MISHRA              1301106153      7.65
+
+58      SONAM BARWA                1301106372      7.62
+
+58      STUTI MAHAPATRA            1301106202      7.62
+
+60      BISWAJEET RAJ              1301106463      7.58
+
+60      PREETISH MOHANTY           1301106201      7.58
+
+62      PRIYANKA SAHOO             1301106405      7.54
+
+62      PIYUSH SARANGI             1301106575      7.54
+
+64      MRUTYUNJAYA CHOUDHARY      1301106445      7.50
+
+64      RONAUK KUMAR MAHARANA      1301106093      7.50
+
+64      SWADHIN SWADESH            1301106252      7.50
+
+64      NATASHA PRADHAN            1301106358      7.50
+
+68      BUDDHADEV BISWAL           1301106022      7.46
+
+69      DIBYASHA MOHANTY           1301106099      7.42
+
+70      ABHISEKO MISRA             1301106579      7.38
+
+71      SUNDARMOHAN BESRA          1301106490      7.23
+
+71      AKASH KUMAR AGRAWAL        1301106413      7.23
+
+73      RAM MANAS                  1301106483      7.20
+
+74      SWATANTRA SWAVIMAN DAS     1301106050      7.19
+
+75      SWAPNIL SATPATHY           1301106123      7.15
+
+76      ROHAN KUMAR MOHANTY        1301106086      6.92
+
+77      BIMALA SETHY               1301106259      6.88
+
+78      MANOJ KUMAR BEHERA         1301106513      6.85
+
+79      ARIJIT BEHERA              1301106075      6.73
+
+79      AMIT MAHAPATRA             1301106403      6.73
+
+81      ANWESH MOHANTY             1301106240      6.69
+
+82      SWATO SOMA PARIDA          1301106209      6.62
+
+83      PRIYARANJAN JENA           1301106423      6.54
+
+84      MANASI MURMU               1301106027      6.38
+
+85      KANHU CHARAN SAHOO         1301106091      6.27
+
+85      DAMAYANTI MAJHI            1301106453      6.27
+
+87      SANTA NIBEDITA             1301106221      6.23
+
+87      SHATAM PATRI               1301106409      6.23
+
+89      PRASHANT KUMAR GHADAI      1301106203      5.96
+
+90      SUMAN PATRA                1301106047      5.92
+
+91      DILIP KINDO                1301106354      5.62
+
+92      PRIYANKA MAJHI             1301106074      5.54
+
+93      RABI NARAYAN HANSDAH       1301106216      5.08
+
+94      SWATI PARIDA               1301106312      4.31
+
+95      AMIT KUMAR BHUYAN          1301106346      3.81
+
+96      SWETA SUCHARITA            1301106526      0.33
+
+----------
+SUBJECT WISE MARK DISTRIBUTION
+
+ENERGY CONVERSION TECHNIQUES:
+O -> 17/96
+E -> 33/96
+A -> 20/96
+B -> 13/96
+C -> 6/96
+D -> 2/96
+F -> 4/96
+S -> 1/96
+MATHEMATICS - IV:
+O -> 1/96
+E -> 7/96
+A -> 29/96
+B -> 30/96
+C -> 17/96
+D -> 1/96
+F -> 10/96
+S -> 1/96
+ENGINEERING ECONOMICS AND COSTING:
+E -> 3/96
+A -> 37/96
+B -> 30/96
+C -> 19/96
+D -> 1/96
+F -> 4/96
+S -> 2/96
+KINEMATICS AND DYNAMICS OF MACHINES:
+E -> 17/96
+A -> 38/96
+B -> 27/96
+C -> 8/96
+D -> 1/96
+F -> 4/96
+S -> 1/96
+ENGINEERING THERMODYNAMICS:
+O -> 5/96
+E -> 13/96
+A -> 26/96
+B -> 13/96
+C -> 13/96
+D -> 7/96
+F -> 18/96
+S -> 1/96
+BASIC MANUFACTURING PROCESSES:
+O -> 1/96
+E -> 28/96
+A -> 30/96
+B -> 21/96
+C -> 9/96
+D -> 4/96
+F -> 2/96
+S -> 1/96
+
+__________________________________________
+ELECTRICAL ENGINEERING
+__________________________________________
+
+1       ALAKA SAI SEVIKA           1301106063      9.36
+
+2       RAJDEEP MISHRA             1301106166      9.21
+
+3       AISHWARYA MAHAPATRA        1301106199      9.14
+
+4       ANSHUMAN MOHAPATRA         1301106094      9.11
+
+4       IPSITA PRIYADARSHINI       1301106122      9.11
+
+6       KOMAL PANIGRAHI            1301106225      9.04
+
+7       SWAGATIKA SAHOO            1301106176      8.96
+
+8       SWADHIN SEKHAR SAHOO       1301106109      8.86
+
+8       KISHORE RANJAN NAYAK       1301106180      8.86
+
+8       JAYASHREE BISWAS           1301106545      8.86
+
+11      ANKITA PATTANAIK           1301106449      8.82
+
+11      ABHILASH NAYAK             1301106072      8.82
+
+13      SNEHASIS PANDA             1301106331      8.79
+
+14      SUSMITA SATAPATHY          1301106058      8.75
+
+14      BISWANATH NANDA            1301106235      8.75
+
+16      ABINASH LENKA              1301106148      8.71
+
+16      BINIT BINAYAK PATI         1301106280      8.71
+
+18      SANKET SMARAK PANDA        1301106232      8.69
+
+19      MONALISA PANDA             1301106040      8.68
+
+19      MD SAIF ALI                1301106366      8.68
+
+19      DHARITREE PANY             1301106555      8.68
+
+22      PRATIYUSH DALAI            1301106178      8.64
+
+22      PRIYANKA PATNAIK           1301106304      8.64
+
+24      AMRIT PATTANAIK            1301106113      8.61
+
+25      SWETA SATPATHY             1301106300      8.57
+
+26      CHINMAY ROUTRAY            1301106097      8.50
+
+26      ANISHA SAHU                1301106324      8.50
+
+26      SANGITA PATHAL             1301106349      8.50
+
+29      PRATEEK PANIGRAHI          1301106389      8.46
+
+30      SARTHAK NAYAK              1301106364      8.43
+
+30      CHADUVULA CHINNA RAJA      1301106420      8.43
+
+32      ALISHA PAIKARAYA           1301106215      8.39
+
+32      RAJAT RATH                 1301106120      8.39
+
+32      TRISALA MISHRA             1301106387      8.39
+
+35      HEMANI MAJHI               1301106217      8.36
+
+35      SRIKANT C H                1301106473      8.36
+
+35      VISHAL PATTANAYAK          1301106503      8.36
+
+35      DILLIP KUMAR KHUNTIA       1301106558      8.36
+
+39      SAMIDHA RATHO              1301106243      8.32
+
+39      HUMPREET SINGH             1301106263      8.32
+
+39      ADYASHA TRIPATHY           1301106374      8.32
+
+39      BARSHANI MALLICK           1301106080      8.32
+
+39      SURAJ DAYAL AECH           1301106452      8.32
+
+39      CLARA MALLIK               1301106566      8.32
+
+45      V TARUN KUMAR              1301106422      8.29
+
+45      PRAYAG RANJAN SAMAL        1301106567      8.29
+
+47      SAMEEP SAHU                1301106411      8.25
+
+47      BISHNUPAD SATPATHY         1301106136      8.25
+
+47      DEBASISH BEHERA            1301106042      8.25
+
+50      SMRUTIRANJAN MOHAPATRA     1301106271      8.21
+
+50      SUNITA PANIGRAHI           1301106301      8.21
+
+50      SANDEEP KUMAR SINGH        1301106024      8.21
+
+53      RAJESH RANJAN MISRA        1301106187      8.18
+
+54      ANIL KUMAR ROUTO           1301106038      8.14
+
+54      NAVJEET NANDA              1301106344      8.14
+
+54      PRANEETH PAIKRAY           1301106104      8.14
+
+57      BHAVNA TRIPATHY            1301106268      8.07
+
+58      TANUSHREE DAS MOHAPATRA    1301106169      8.04
+
+58      ANJALI MAHATO              1301106592      8.04
+
+60      UPASANA PATNAIK            1301106237      8.00
+
+61      SASWATA DAS ADHIKARY       1301106020      7.96
+
+61      ASHISH ARPAN MOHAPATRA     1301106342      7.96
+
+61      SUBHAM YADAV               1301106474      7.96
+
+64      SUNIDHI PRADHAN            1301106341      7.93
+
+65      PALLAVI MOHAPATRA          1301106238      7.75
+
+65      PRAKASH ROSHAN NAYAK       1301106164      7.75
+
+67      ROMALY DAS                 1301106133      7.64
+
+68      SIMANI SINGH               1301106441      7.57
+
+69      SANDEEP PATI               1301106242      7.54
+
+70      PRATIK SUKLA               1301106270      7.50
+
+71      ASHIS MISHRA               1301106562      7.43
+
+72      ANADI CHARAN MUDALI        1301106350      7.39
+
+73      MADHUSMITA MARANDI         1301106218      7.36
+
+74      BIMUKTA KETAN DAS          1301106175      7.32
+
+75      ALVA MANISHA BARLA         1301106357      7.25
+
+75      SUDHANSHU SEKHAR SATPATHY   1301106396      7.25
+
+77      PRIYANKA MURMU             1301106064      7.21
+
+78      AISWARYA PRIYADARSHINI SWAIN   1301106158      7.14
+
+79      PRABIN KUMAR LAKRA         1301106373      7.07
+
+80      JAJNESWAR DASH             1301106502      7.00
+
+81      SWETA PRAGYAN PRAHARAJ     1301106250      6.93
+
+82      PARTHASARATHY NAYAK        1301106425      6.89
+
+83      ROBERT BAZIO KHORA         1301106319      6.36
+
+83      ANKIT RAJU                 1301106419      6.36
+
+85      SANJAY KUMAR BASKEY        1301106504      6.18
+
+86      SWABHIMAN PRADHAN          1301106370      6.04
+
+87      TUSAR KANTA SETHI          1301106430      5.96
+
+88      MANISH BISHOYEE            1301106184      5.61
+
+89      KISHOR KUMAR MAHATO        1301106584      5.54
+
+90      ABHISHEK KUMAR BEHRA       1301106598      5.39
+
+91      RAHUL TIRKEY               1301106348      5.36
+
+92      SASHIKANTA DAS             1301106082      5.29
+
+93      IPSITA                     1301106533      5.18
+
+94      SAMBIT KUMAR MALLICK       1301106272      5.14
+
+95      UMESH PRADHAN              1301106531      4.96
+
+96      SUNIL KUMAR NAYAK          1301106157      4.93
+
+97      DEVASHISH DASH             1301106587      4.75
+
+98      RAJAT KUMAR PATRA          1301106034      4.60
+
+99     	DEBIDUTTA MOHANTY          1301106254      4.50
+
+____________________________________________________
+INSTRUMENTATION AND ELECTRONICS ENGINEERING
+_____________________________________________________
+
+1       SIBANI PRADHAN             1301106375      9.32
+
+2       SONAM BISWAL               1301106273      9.29
+
+3       ARGHYA PATNAIK             1301106269      9.18
+
+3       ANANNYA PANDA              1301106440      9.18
+
+3       SHUBHAM KUMAR SAHU         1301106538      9.18
+
+6       SAGUFA AZEEZ               1301106210      9.04
+
+7       AAYUSHI JAJODIA            1301106288      8.93
+
+8       SUPRAKASH MISHRA           1301106325      8.89
+
+8       CHINMOY MISHRA             1301106390      8.89
+
+8       DEEPAK KUMAR RATH          1301106395      8.89
+
+11      ASHISH SENAPATI            1301106088      8.86
+
+11      SRUTISAGAR PATTANAIK       1301106121      8.86
+
+13      SAMARJIT TRIPATHY          1301106049      8.82
+
+13      DEEPSIKHA MOHANTY          1301106415      8.82
+
+13      AISWORYA CHAND             1301106450      8.82
+
+16      SAMEER RANJAN DAS          1301106256      8.79
+
+16      ANKUSH TULSYAN             1301106356      8.79
+
+18      SOUMYA RANJAN MOHAPATRA    1301106264      8.75
+
+18      NITISH KUMAR JHA           1301106371      8.75
+
+20      STHITIPRAGYAN SAHOO        1301106454      8.68
+
+21      PRACHI PRANGYA AGASTI      1301106456      8.61
+
+22      ISMITA NAYAK               1301106438      8.57
+
+23      SUMAN ROUTRAY              1301106289      8.54
+
+23      SURAJ KUMAR ROUT           1301106057      8.54
+
+25      SWAMANTAK PADHI            1301106163      8.50
+
+26      SABYASACHI MISHRA          1301106032      8.46
+
+27      SIDDHANT JENA              1301106051      8.43
+
+27      SIDDHANT KUMAR SAHU        1301106408      8.43
+
+27      KAUSHIK SARANGI            1301106544      8.43
+
+30      BISWA RANJAN MISHRA        1301106195      8.39
+
+31      SAMYAK SUBHANKAR TRIPATHY   1301106154      8.36
+
+32      DEVI PRASAD BALIARSINGH    1301106056      8.32
+
+32      BHARAT KUMAR PANDI         1301106421      8.32
+
+34      PANKAJ KUMAR PANDA         1301106128      8.25
+
+34      AMIT BIKRAM TRIPATHY       1301106036      8.25
+
+36      SIDHANT SOURAV             1301106198      8.18
+
+36      DINABANDHU SAHU            1301106219      8.18
+
+36      JEEVAN JYOTI SWAIN         1301106290      8.18
+
+36      SOUMYA MOHANTY             1301106571      8.18
+
+40      ABHISHEK DASH              1301106196      8.11
+
+40      SANCHITA RATH              1301106245      8.11
+
+40      LIPSA CHOUDHURY            1301106048      8.11
+
+40      GMANMATH MAHAPATRA         1301106083      8.11
+
+44      SHAKTI SWARUP DASH         1301106095      8.07
+
+44      SWETA MISHRA               1301106014      8.07
+
+46      DEBASHISH SINGH            1301106491      8.04
+
+47      SASWAT RAY                 1301106258      8.00
+
+48      ANUSTUP BISWAL             1301106410      7.93
+
+49      ADITI DASH                 1301106009      7.89
+
+49      PRABHU PIYUSHA DASH        1301106076      7.89
+
+51      SAHIL AHMED                1301106193      7.86
+
+51      SATYAKAM PATNAIK           1301106261      7.86
+
+53      SAROJ RAJ TRIPATHY         1301106172      7.82
+
+54      ASHISH KUMAR SAHOO         1301106392      7.79
+
+55      SAROJ KUMAR SAHOO          1301106314      7.71
+
+56      ASHUTOSH MISHRA            1301106160      7.68
+
+56      SUNIL PATRA                1301106065      7.68
+
+56      NAIBEDYA PATTNAIK          1301106529      7.68
+
+59      PRINCE KUMAR MAHATO        1301106012      7.57
+
+59      SURAJ PRAKASH BEHERA       1301106379      7.57
+
+59      AMARENDRA PANDA            1301106045      7.57
+
+62      BIDHU BHUSAN MOHANTY       1301106070      7.50
+
+63      MUCRON                     1301106145      7.46
+
+63      DEVARSHI BRAJAJIT SWAIN    1301106135      7.46
+
+65      PARAINI SOREN              1301106204      7.43
+
+65      SUKANTI NAIK               1301106015      7.43
+
+67      SHOVNA KARAN               1301106211      7.39
+
+67      SOURAV SOUMYAJIT MOHANTY   1301106521      7.39
+
+69      ANURADHA KHATUA            1301106317      7.25
+
+70      PRIYA BINITA EKKA          1301106347      7.21
+
+71      BIKASH RANJAN SAHOO        1301106279      7.14
+
+71      SARASWATI MURMU            1301106028      7.14
+
+73      SMRUTIREKHA PUSPASREE      1301106549      7.11
+
+74      KAJOL MURMU                1301106416      7.07
+
+74      REETA SETHI                1301106291      7.07
+
+76      SUNIL BEHERA               1301106318      7.00
+
+76      RAJASHREE AGRAWAL          1301106311      7.00
+
+78      JOBA HANSDAH               1301106393      6.96
+
+79      ANKESH KUMAR               1301106594      6.93
+
+80      SUSHANTI MURMU             1301106563      6.89
+
+81      ASISH BARAD                1301106087      6.75
+
+82      MANISHA TIGGA              1301106497      6.68
+
+83      ALEX KERKETTA              1301106337      6.54
+
+84      LOHIT SAGAR NAIK           1301106284      6.43
+
+85      DIBYAJYOTI SAHOO           1301106182      6.18
+
+85      AWADHESH NANDAN PANDA      1301106055      6.18
+
+87      SRIKANT MAJUMDER           1301106234      6.04
+
+88      ASHISH BHOI                1301106458      5.79
+
+88      CHANDAN KUMAR              1301106591      5.79
+
+90      KALINGA MOHANTY            1301106266      5.57
+
+91      MALAYA RANJAN SETHY        1301106561      5.50
+
+91      SK TAJUDDIN                1301106315      5.50
+
+93      ANUBHAV MISHRA             1301106486      5.21
+
+94      ABHISHEK NANDA             1301106586      5.04
+
+95      SUMAN KUMAR DAS            1301106577      4.68
+
+96      SARGAM DAS                 1301106112      4.64
+
+97      DEEPAK KUMAR NAIK          1301106068      4.25
+
+98      SAHADEB NAIK               1301106001      4.04
+
+__________
+CIVIL
+__________
+
+1       KUMARI MEENAKSHI           1301106190      9.48
+
+2       ASHUTOSH PANDA             1301106078      9.24
+
+3       PRATIKSHYA SAHOO           1301106004      9.20
+
+4       ABHISHEK MOHAPATRA         1301106498      9.16
+
+5       SIDHARTH DAS               1301106208      9.12
+
+6       SUJIT ABHISHEK BEHURA      1301106226      9.08
+
+7       PRASANT KUMAR KANUNGO      1301106103      9.00
+
+8       SATYA PRAKASH MISHRA       1301106547      8.88
+
+9       PRATYUSH SWAIN             1301106181      8.76
+
+10      SRINIBAS MOHAPATRA         1301106230      8.68
+
+11      ARPITA RAY                 1301106257      8.60
+
+11      STHITAPRAGYAN PALAI        1301106471      8.60
+
+13      SARBANI PANDA              1301106033      8.52
+
+13      BODHISATWA NAYAK           1301106143      8.52
+
+13      ROSHAN SURYA KANT MOHANTY   1301106060      8.52
+
+13      RITWIK PATTNAIK            1301106260      8.52
+
+13      SADASIBA BEHERA            1301106326      8.52
+
+18      PRITIMAYEE SWAIN           1301106293      8.48
+
+18      SAMBIT KUMAR BISWAL        1301106295      8.48
+
+18      V RAJESH PATRO             1301106037      8.48
+
+21      ANWESHA RATH               1301106223      8.44
+
+21      SHWETA PANDA               1301106431      8.44
+
+21      SUDHIR KUMAR PRADHAN       1301106553      8.44
+
+24      KIRAN BHARATI              1301106167      8.40
+
+24      MITRABINDA DAS             1301106046      8.40
+
+24      SUSHREE KIRAN SAMAL        1301106459      8.40
+
+27      SHATABHISA MISHRA          1301106165      8.36
+
+27      MINAKSHI PUHAN             1301106537      8.36
+
+29      PRATIK KUMAR HOTA          1301106029      8.32
+
+29      RAMAN KUMAR                1301106455      8.32
+
+29      PUSPA PRIYADARSHINI PATRA   1301106516      8.32
+
+32      KIRAN MURMU                1301106277      8.28
+
+32      ASHISH KUMAR ROUT          1301106446      8.28
+
+32      SITANSU SEKHAR PRADHAN     1301106137      8.28
+
+35      SANGRAM PATRA              1301106159      8.24
+
+35      ABHISEK ROUT               1301106115      8.24
+
+35      SAHASHRANSU DHAL           1301106085      8.24
+
+35      SMRUTI RANJAN BHOL         1301106519      8.24
+
+39      KUNAL KUMAR NAYAK          1301106017      8.20
+
+39      SUBHAM KUMAR PATEL         1301106550      8.20
+
+41      AMRIT GAJENDRA             1301106110      8.16
+
+41      DEBASHISH PRADHAN          1301106548      8.16
+
+43      RESHMA SAHOO               1301106338      8.12
+
+44      MANOJ KUMAR BEHERA         1301106334      8.04
+
+44      SUBHASISH PRUSTY           1301106130      8.04
+
+46      SOUMYAKANTA SAHOO          1301106102      8.00
+
+46      ANKITA PARIDA              1301106404      8.00
+
+48      HEMATRUSHNA JENA           1301106092      7.96
+
+48      SOUMYA SHANKAR RAY         1301106465      7.96
+
+50      SAILESH KUMAR SATAPATHY    1301106427      7.92
+
+50      URMILA SETHI               1301106044      7.92
+
+50      TANMAY KUMAR BISWAL        1301106116      7.92
+
+53      SOUMYASHREE PANI           1301106523      7.88
+
+54      SANUJ KUMAR SAHOO          1301106194      7.84
+
+54      ADITYA KUMAR SINGH         1301106138      7.84
+
+54      ROJALIN SAHU               1301106297      7.84
+
+57      KUSHAL AGARWAL             1301106339      7.80
+
+57      SANDIP KUMAR DAS           1301106522      7.80
+
+59      SARTHAK MOHAPATRA          1301106451      7.76
+
+59      BINOY PANIGRAHI            1301106227      7.76
+
+61      AKASH KUMAR GUPTA          1301106508      7.72
+
+62      ANANYA SARANGI             1301106457      7.60
+
+63      ASHIRBAD SATAPATHY         1301106470      7.52
+
+64      SUMAN MOHAPATRA            1301106460      7.44
+
+65      SARTHAK  CHOUDHURY         1301106383      7.40
+
+65      SARTHAK SAHU               1301106303      7.40
+
+65      DEEPAK KUMAR LENKA         1301106525      7.40
+
+68      SAHIQUE KHAN               1301106251      7.36
+
+69      TANMAYA KUMAR SAHOO        1301106532      7.32
+
+69      SOUBHAGYA SATAPATHY        1301106200      7.32
+
+71      PUSPANJALA KARUAN          1301106125      7.28
+
+71      PAYAL MALLICK              1301106527      7.28
+
+73      ABINASH MISHRA             1301106142      7.24
+
+74      BIBHUTI BHUSAN SAHOO       1301106492      7.20
+
+75      PRADIP KUMAR JENA          1301106487      7.16
+
+76      SITIKANTHA SATAPATHY       1301106002      7.08
+
+77      RAKESH KUMAR BEHERA        1301106466      6.80
+
+78      DEEPAK KUMAR GARTIA        1301106496      6.76
+
+78      HIMANSU SEKHAR PANDA       1301106429      6.76
+
+80      DEBASHIS MISHRA            1301106246      6.72
+
+81      SIPRA SINGH                1301106183      6.64
+
+81      PRITESH KUMAR JENA         1301106098      6.64
+
+83      SONALI SATAPATHY           1301106539      6.40
+
+84      DEEPAK KUMAR MISHRA        1301106581      6.32
+
+85      BIBEK RANJAN BEHERA        1301106222      6.24
+
+85      SABUJA MOHAPATRA           1301106274      6.24
+
+85      SAGARIKA KANHAR            1301106469      6.24
+
+88      NARENDRA MOHAN SINGH       1301106155      6.16
+
+89      CHANDU RAMAN PENUMARTHY    1301106418      6.12
+
+90      ABHISEK BADAJENA           1301106517      6.04
+
+91      SOURABH PRADHAN            1301106588      5.76
+
+92      SONALIKA MISHRA            1301106329      5.60
+
+93      RAKESH KUMAR JENA          1301106249      5.52
+
+94      PRAFULLA JANI              1301106495      5.36
+
+94      MANISHA PANDA              1301106580      5.36
+
+96      SUNIL KUMAR BEHERA         1301106426      5.28
+
+97      SURAJ BIHARI MANDAL        1301106578      5.20
+
+98      BALABHADRA MURMU           1301106536      5.12
+
+99      SALMA BESRA                1301106380      5.04
+
+100     BHARGAV PRASAD PANIGRAHI   1301106557      4.84
+
+101     DEBASH KUMAR DAS           1301106281      4.68
+
+102     SANTOSH KUMAR PANDA        1301106406      4.32
+
+103     GAYATRI MURMU              1301106030      4.00
+
+104     NIHAR RANJAN SAHOO         1301106006      3.44
+
+105     RAJESH KUMAR BEHERA        1301106147      3.43
+
+106     ABHINAB GIRI               1301106436      0.00
+
+________________________________
+COMPUTER SCIENCE
+________________________________
+
+1       SHAIKH MOHAMMED ISRAIL     1301106333      8.96
+
+2       PRABLIN KAUR JUNEJA        1301106327      8.85
+
+3       MONIKA PANDA               1301106480      8.70
+
+4       ANIKET PANIGRAHI           1301106398      8.67
+
+5       PRIYA CHAUHAN              1301106309      8.63
+
+6       RONIT MOHANTY              1301106213      8.56
+
+7       MANDEEP SUSHANT KUMAR JOJO   1301106343      8.48
+
+8       RISHI GOSWAMY              1301106400      8.44
+
+8       PIYUS SRAVAN TRIPATHY      1301106464      8.44
+
+10      ABHIPSA MISHRA             1301106197      8.33
+
+10      SWATI SAHOO                1301106013      8.33
+
+12      AYUSH MOHANTY              1301106117      8.26
+
+12      SWAGAT PRADHAN             1301106560      8.26
+
+14      ABHISHEK RAY               1301106360      8.11
+
+15      AFRIN NAAZ                 1301106018      8.07
+
+15      SIMRAN SINGH               1301106362      8.07
+
+15      HARSHA GOYAL               1301106363      8.07
+
+15      DEBESH MISHRA              1301106385      8.07
+
+19      SHIVANI LATH               1301106066      8.04
+
+19      SABYASACHI BISOYI          1301106417      8.04
+
+21      DEEPAN KRISHNA TRIPATHY    1301106401      8.00
+
+22      ABINASH NAYAK              1301106189      7.96
+
+22      ASHUTOSH SENAPATI          1301106376      7.96
+
+22      SARTHAK MOHAPATRA          1301106282      7.96
+
+22      AYUSH GAUTAM               1301106129      7.96
+
+26      ABHILASH SAHOO             1301106365      7.93
+
+26      MANISHA SAHU               1301106482      7.93
+
+26      CHINMAYA MARTHA            1301106191      7.93
+
+29      SUDIP BALA                 1301106150      7.85
+
+30      SIDDHANT MISHRA            1301106574      7.78
+
+31      SUBHAM PERIWAL             1301106276      7.63
+
+32      ABHISHEK PATNAIK           1301106361      7.59
+
+33      HANEESHA VALLAMSETTI       1301106127      7.52
+
+34      ANISHKA AGRAWAL            1301106377      7.44
+
+35      ABHISEK MOHANTY            1301106330      7.41
+
+36      SANGEETA                   1301106583      7.22
+
+37      RAMAKRUSHNA SETHI          1301106485      7.15
+
+38      BHABANA SAHU               1301106041      7.11
+
+39      SAMPAD KUMAR BHUYAN        1301106179      6.85
+
+40      DEBASHISH LENKA            1301106126      6.33
+
+41      PRAKASH KUMAR TUDU         1301106412      6.22
+
+42      B MANASH RANJAN            1301106493      6.19
+
+43      SWAGATH NAIK               1301106224      5.11
+
+44      BISHAL KUMAR HEMBRAM       1301106229      4.70
+
+45      ABHISHEK SATHUA            1301106585      4.30
+
+46      JOSEPH JANI                1301106322      3.85
+
+47      AYUSH PRADHAN              1301106062      0.87
+
+__________
+BIO-TECH
+__________
+
+1       DIVYAJYOTI BISWAL          1301106433      9.38
+
+2       S CHANDNI RAO              1301106572      8.88
+
+3       SHEETAL PATNAIK            1301106510      8.58
+
+4       BABISHWETA SAHOO           1301106359      8.50
+
+5       NIMISHA ACHARYA            1301106352      8.19
+
+6       DEBASMITA GHOSH            1301106306      8.00
+
+7       AAYUSHEE MISHRA            1301106308      7.81
+
+7       SUBHA SOUNDARYA PRIYADARSHINI   1301106146      7.81
+
+7       SWARUPANANDA PANDA         1301106118      7.81
+
+7       SHIVANI MARANDI            1301106515      7.81
+
+11      BIKASH RANJAN SAMAL        1301106507      7.77
+
+12      ROSALIN DEHURY             1301106007      7.54
+
+13      IPSEETA PANIGRAHI          1301106394      6.77
+
+14      KESHARI MAJHI              1301106462      6.62
+
+15      SHIBANEERANI BARIHA        1301106552      6.42
+
+16      SANTONU KUMAR PRADHAN      1301106228      6.19
+
+17      GOPAL CHANDRA LAHA         1301106541      5.81
+
+18      AISHWARYA KUMAR DAS        1301106096      5.58
+
+__________
+I . T .
+__________
+
+1       BISWASMITA SINGH           1301106248      9.15
+
+2       SWASTIK NANDA              1301106156      9.11
+
+3       SAMIKSHYA PANI             1301106461      8.93
+
+4       POOJA PATTNAIK             1301106061      8.48
+
+5       SONIKA PANIGRAHI           1301106382      8.44
+
+6       SARITA MISHRA              1301106488      8.41
+
+7       PRIYANKA PATNAIK           1301106399      8.32
+
+8       PRAYASH MOHAPATRA          1301106071      8.30
+
+9       EKTA HOTA                  1301106328      8.26
+
+10      PRAGYAN PRIYADARSINI       1301106139      8.22
+
+11      SRIPARNA PATRA             1301106079      8.15
+
+12      BIDISHA BHAR               1301106134      8.07
+
+12      SOUMYA SASWATI ACHARYA     1301106043      8.07
+
+14      ANSHUMAN RAY               1301106267      8.04
+
+14      BIRABHADRA DAAS            1301106073      8.04
+
+16      SOUVEEK PRADHAN            1301106090      7.96
+
+17      SANDIP TRIPATHY            1301106590      7.89
+
+18      ROHIT SARAOGI              1301106386      7.88
+
+19      RAHUL SHARMA               1301106368      7.85
+
+19      SUSHREE RAJLAXMI MOHAPATRA   1301106054      7.85
+
+19      NAMRATA PRADHAN            1301106069      7.85
+
+19      HARI PRASAD SWAIN          1301106518      7.85
+
+23      SAYED MOHAMMED AFIF        1301106275      7.70
+
+24      SOFIA MAJHI                1301106340      7.63
+
+24      LALITENDU SEKHAR SAHOO     1301106447      7.63
+
+26      BIJAY NAIK                 1301106152      7.44
+
+27      SUNDEEP BISOYE             1301106035      7.33
+
+28      SOURAV DAS                 1301106351      7.26
+
+28      SIDDHANT BAL               1301106448      7.26
+
+30      MADHUSMITA MANDAL          1301106511      7.11
+
+31      RAMAKRUSHNA MOHAPATRA      1301106021      7.00
+
+32      AMRITANGSHU MAHAPATRA      1301106595      6.96
+
+33      RAKESH KUMAR NAYAK         1301106428      6.89
+
+34      ANIL KUMAR SAHOO           1301106161      6.67
+
+34      MAYANK MAHAPATRA           1301106151      6.67
+
+36      BAISHALI PRIYADARSANI PUJARI   1301106168      6.52
+
+37      REKHA MANDAL               1301106589      6.11
+
+38      TRUPTI NAYAK               1301106378      6.04
+
+39      ANSHUMAN PANDA             1301106031      5.96
+
+40      AMIT KUMAR PATRA           1301106484      5.78
+
+41      SOBHAN ACHARYA             1301106320      5.63
+
+42      RUDRAKHYA BADU             1301106114      5.56
+
+43      RAHUL MURMU                1301106162      4.52
+
+44      LINGARAJ MEHER             1301106185      3.96
+
+45      BASTA BESHRA               1301106369      3.85
+
+46      BIJAY KUMAR BISWAL         1301106467      3.78
+
+47      PALLAVI PRADHAN            1301106437      2.44
+
+48      TAPASH KUMAR BISWAS        1301106530      0.17
+
+____________
+TEXTILE
+____________
+
+1       SHILPA SAHOO               1301106524      7.81
+
+2       SOUMYA SIBANI DAS          1301106177      7.65
+
+3       SAMIR SATAPATHY            1301106435      7.62
+
+4       SIVANGI SADHANA KABI       1301106476      7.50
+
+4       DEBASMITA HOTA             1301106565      7.50
+
+6       RAJAT KUMAR MANNA          1301106206      7.46
+
+6       DEEPIKA PRADHAN            1301106478      7.46
+
+8       SAMEER KEDIA               1301106023      7.27
+
+9       SIVANANDA PANDA            1301106407      6.81
+
+10      ASHA MISHRA                1301106542      6.62
+
+11      RAJKISHORE DAS             1301106244      6.42
+
+12      RASHMI RANJAN NAYAK        1301106124      6.38
+
+13      VINITA MOHANTY             1301106573      6.31
+
+14      DIVIKA MIRDHA              1301106534      6.27
+
+15      N PRATYUSHA                1301106520      6.19
+
+16      KULSUM BEGUM               1301106475      6.15
+
+17      ANKIT KUMAR MAHAPATRA      1301106505      6.08
+
+18      LAL KRUSHNA SAHU           1301106294      5.92
+
+19      ANIMESH MOHANTY            1301106468      5.88
+
+20      SHUBHAM KUMAR PATRA        1301106108      5.81
+
+21      RAJIB RANJAN LAL           1301106494      5.54
+
+22      SASMITA HANSDAH            1301106489      5.38
+
+22      SMARAK MOHANTY             1301106283      5.38
+
+24      SANDEEP KUMAR DEHURY       1301106335      5.15
+
+25      SOUMYA MAITY               1301106241      5.04
+
+26      ABHISHEK NAYAK             1301106336      4.62
+
+27      BABITA KUMARI              1301106593      4.50
+
+28      GOBINDA HEMBRAM            1301106316      3.92
+
+29      MANAS RANJAN CHHUALSINGH   1301106084      3.54
+
+__________
+FASHION
+__________
+
+1       SWETA RANI PATRA           1301106479      8.67
+
+2       SURYASNATA PRADHAN         1301106559      8.56
+
+3       SUCHISMITA CHAKRABORTY     1301106233      8.37
+
+4       DIKSHYA SAHU               1301106551      8.26
+
+5       ANKITA PATNAIK             1301106506      7.96
+
+6       SUSMITA DEY                1301106305      7.78
+
+7       PRIYANKA PANI              1301106535      7.59
+
+
+
