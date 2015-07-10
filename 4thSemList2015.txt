@@ -8,6 +8,8 @@ Note:
 Forgot roll pattern of LE students, please someone say that
 [fixed]
 
+Added grade distribution of every branch
+
 FORMAT:
 
 RANK - NAME - ROLL - GRADE
@@ -292,6 +294,71 @@ _____________________________________________________
 137     SWETA SUCHARITA            1301106526      0.33
 
 
+---------------
+Grade distribution :
+
+Subjects:
+ENERGY CONVERSION TECHNIQUES
+MATHEMATICS - IV
+ENGINEERING ECONOMICS AND COSTING
+KINEMATICS AND DYNAMICS OF MACHINES
+ENGINEERING THERMODYNAMICS
+BASIC MANUFACTURING PROCESSES
+
+Grades:
+O -> 18/137
+E -> 34/137
+A -> 30/137
+B -> 20/137
+C -> 18/137
+D -> 5/137
+F -> 11/137
+S -> 1/137
+
+O -> 1/137
+E -> 12/137
+A -> 40/137
+B -> 36/137
+C -> 26/137
+D -> 3/137
+F -> 18/137
+S -> 1/137
+
+E -> 3/137
+A -> 44/137
+B -> 53/137
+C -> 26/137
+D -> 4/137
+F -> 5/137
+S -> 2/137
+
+E -> 24/137
+A -> 45/137
+B -> 45/137
+C -> 13/137
+D -> 4/137
+F -> 5/137
+S -> 1/137
+
+O -> 6/137
+E -> 19/137
+A -> 36/137
+B -> 21/137
+C -> 21/137
+D -> 9/137
+F -> 24/137
+S -> 1/137
+
+O -> 2/137
+E -> 33/137
+A -> 39/137
+B -> 34/137
+C -> 20/137
+D -> 5/137
+F -> 3/137
+S -> 1/137
+
+
 __________________________________________
 ELECTRICAL ENGINEERING
 __________________________________________
@@ -554,7 +621,63 @@ __________________________________________
 
 129     RAJENDRA BEHERA            1421106047      3.64
 
+_______
+Grade distribution :
 
+Subjects:
+FLUID MECHANICS AND MACHINES
+MATERIAL SCIENCE AND ENGINEERING
+ENGINEERING ECONOMICS AND COSTING
+DIGITAL ELECTRONICS CIRCUIT
+ELECTRICAL MACHINE - I
+ELECTRICAL AND ELECTRONICS MEASUREMENT
+
+Grades:
+E -> 5/129
+A -> 29/129
+B -> 36/129
+C -> 33/129
+D -> 2/129
+F -> 22/129
+S -> 2/129
+
+O -> 19/129
+E -> 32/129
+A -> 18/129
+B -> 15/129
+C -> 12/129
+D -> 20/129
+F -> 13/129
+
+E -> 3/129
+A -> 20/129
+B -> 47/129
+C -> 39/129
+D -> 6/129
+F -> 14/129
+
+O -> 14/129
+E -> 30/129
+A -> 32/129
+B -> 13/129
+C -> 17/129
+D -> 6/129
+F -> 17/129
+
+O -> 3/129
+E -> 24/129
+A -> 43/129
+B -> 27/129
+C -> 12/129
+D -> 10/129
+F -> 10/129
+
+E -> 3/129
+A -> 51/129
+B -> 34/129
+C -> 22/129
+D -> 15/129
+F -> 4/129
 ____________________________________________________
 INSTRUMENTATION AND ELECTRONICS ENGINEERING
 _____________________________________________________
@@ -795,7 +918,60 @@ _____________________________________________________
 
 118     SAHADEB NAIK               1301106001      4.04
 
+------------
+Subjects:
+C++ AND OBJECT ORIENTED PROGRAMMING
+ENERGY CONVERSION DEVICES
+FLUID MECHANICS AND MACHINES
+PHYSICS OF SEMICONDUCTOR DEVICES
+ORGANISATIONAL BEHAVIOUR
+DIGITAL ELECTRONICS CIRCUIT
 
+Grades:
+
+O -> 1/118
+E -> 41/118
+A -> 31/118
+B -> 29/118
+C -> 14/118
+F -> 2/118
+
+O -> 3/118
+E -> 18/118
+A -> 13/118
+B -> 23/118
+C -> 24/118
+D -> 8/118
+F -> 29/118
+
+E -> 9/118
+A -> 20/118
+B -> 37/118
+C -> 17/118
+D -> 15/118
+F -> 20/118
+
+E -> 20/118
+A -> 31/118
+B -> 12/118
+C -> 18/118
+D -> 18/118
+F -> 19/118
+
+E -> 5/118
+A -> 41/118
+B -> 42/118
+C -> 17/118
+D -> 7/118
+F -> 6/118
+
+O -> 5/118
+E -> 29/118
+A -> 26/118
+B -> 16/118
+C -> 18/118
+D -> 11/118
+F -> 13/118
 
 __________
 CIVIL
@@ -1047,6 +1223,69 @@ __________
 
 123     ABHINAB GIRI               1301106436      0.00
 
+---------------
+Grade Distribution
+
+Subjects :
+MATHEMATICS - IV
+DATABASE MANAGEMENT SYSTEM
+ORGANISATIONAL BEHAVIOUR
+STRUCTURAL ANALYSIS - I
+SURVEYING - I
+GEO TECHNICAL ENGINEERING
+
+Grades:
+
+O -> 5/123
+E -> 21/123
+A -> 43/123
+B -> 20/123
+C -> 17/123
+D -> 4/123
+F -> 12/123
+S -> 1/123
+
+E -> 5/123
+A -> 22/123
+B -> 28/123
+C -> 19/123
+D -> 13/123
+F -> 34/123
+S -> 2/123
+
+E -> 4/123
+A -> 16/123
+B -> 39/123
+C -> 20/123
+D -> 32/123
+F -> 10/123
+S -> 2/123
+
+E -> 5/123
+A -> 34/123
+B -> 40/123
+C -> 24/123
+D -> 10/123
+F -> 9/123
+S -> 1/123
+
+O -> 32/123
+E -> 49/123
+A -> 22/123
+B -> 11/123
+C -> 5/123
+F -> 2/123
+S -> 2/123
+
+O -> 4/123
+E -> 23/123
+A -> 35/123
+B -> 15/123
+C -> 16/123
+D -> 8/123
+F -> 20/123
+S -> 2/123
+
 
 ________________________________
 COMPUTER SCIENCE
@@ -1182,7 +1421,18 @@ ________________________________
 
 65      AYUSH PRADHAN              1301106062      0.87
 
+-------------
+Subjects:
+DISCRETE MATHEMATICS
+ENGINEERING ECONOMICS AND COSTING
+SYSTEM PROGRAMMING
+DESIGN AND ANALYSIS OF ALGORITHM
+DATABASE ENGINEERING
+DIGITAL ELECTRONICS CIRCUIT
 
+Grades :
+
+tba
 
 __________
 BIO-TECH
@@ -1346,6 +1596,10 @@ __________
 56      PALLAVI PRADHAN            1301106437      2.44
 
 57      TAPASH KUMAR BISWAS        1301106530      0.17
+
+-------
+tba
+
 ____________
 TEXTILE
 ____________
@@ -1432,7 +1686,8 @@ ____________
 
 41      MANAS RANJAN CHHUALSINGH   1301106084      3.54
 
-
+-----
+tba
 
 __________
 FASHION
@@ -1452,5 +1707,6 @@ __________
 
 7       PRIYANKA PANI              1301106535      7.59
 
-
+---
+tba
 
