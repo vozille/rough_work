@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main Page</title>
+    <meta charset="utf-8">
+    <title>HTML</title>
+    <style>
+        #editorA { 
+                position: absolute;
+                top: 25px;
+                right: 0;
+                bottom: 0;
+                left: 0px;
+                width: 830px;
+                height: 390px;
+                border-width: 5px; 
+            }
+        #editorB { 
+                position: absolute;
+                top: 25px;
+                right: 0;
+                bottom: 0;
+                left: 0px;
+                width: 830px;
+                height: 390px;
+                border-width: 5px; 
+            }
+        #packA {
+        		position: relative;
+                top: calc(100% - 420px)
+                right: 0;
+                bottom: 0;
+                left: 5px;
+        }
+        #packB {
+        		position: relative;
+                top: calc(100% - 420px)
+                right: 0;
+                bottom: 0;
+                left: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="bs-example">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#sectionA">Code A</a></li>
+        <li><a data-toggle="tab" href="#sectionB">Code B</a></li>
+
+    </ul>
+    <div class="tab-content">
+        <div id="sectionA" class="tab-pane fade in active">
+        	<div id = "StatementA">
+	    		
+	    		<h5>Time Limit Per Test File (seconds): N </h5>
+	    		<h5>Memory Limit Per Test File (MB): N </h5>
+	    		<p></p>
+	    		<p></p>
+	    		<h2>Additon !!</h2>
+				<p>Your Task is Simple</p>
+				<p>Add two Numbers A and B</p>
+
+				<h3>Description</h3>
+				<p>First Line N contains number of TestCases N</p>
+				<p> Next N lines contain 2 Integers A and B </p>
+				<p>1 <= T <= 10^5</p>
+				<p>1 < A,B < 10^100 </p>
+	    		<h3>Sample Input</h3>
+	    		<p>2</p>
+	    		<p>5 6</p>
+	    		<p>10000000000000000000000000000000000000000000 1 </p>
+
+	    		<h3>Sample Output</h3>
+	    		<p>11</p>
+	    		<p>10000000000000000000000000000000000000000001</p>
+	    		<h3>Select Language</h3>
+    		</div>
+    		<div id = "packA">
+	            <select id="decisionA" onchange="fooA()">
+							<option value="C" selected>C
+							<option value="CPP">C++
+							<option value="JAVA">Java
+							<option value="PYTHON">Python
+							</select>
+							<script type="text/javascript">
+								function fooA(){
+									var list = (document.getElementById("decisionA"));
+									var fileCode = list.options[list.selectedIndex].value;
+									edit = document.getElementById("editorA");
+									edit.src = "./defaultEditors/editor"+fileCode+".html";
+								}
+							</script>
+							<iframe src="./defaultEditors/editorC.html" id = "editorA"></iframe>
+			</div>
+        </div>
+        <div id="sectionB" class="tab-pane fade">
+        	<div id = "StatementA">
+	    		
+	    		<h5>Time Limit Per Test File (seconds): N </h5>
+	    		<h5>Memory Limit Per Test File (MB): N </h5>
+	    		<p></p>
+	    		<p></p>
+	    		<h2>Name</h2>
+				<p>Your Task is Simple</p>
+				<p>Add two Numbers A and B</p>
+
+				<h3>Description</h3>
+				
+	    		<h3>Sample Input</h3>
+
+	    		<h3>Sample Output</h3>
+	    		<h3>Select Language</h3>
+    		</div>
+    		<div id = "packB">
+
+	            <select id="decisionB" onchange="fooB()">
+							<option value="C" selected>C
+							<option value="CPP">C++
+							<option value="JAVA">Java
+							<option value="PYTHON">Python
+							</select>
+							<script type="text/javascript">
+								function fooB(){
+									var listB = (document.getElementById("decisionB"));
+									var fileCodeB = listB.options[listB.selectedIndex].value;
+									editB = document.getElementById("editorB");
+									editB.src = "./defaultEditors/editor"+fileCodeB+".html";
+								}
+							</script>
+							<iframe src="./defaultEditors/editorC.html" id = "editorB"></iframe>
+				</div>
+        </div>
+    </div>
+</body>
+</html>
