@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HTML</title>
+    <style>
+        #editor { 
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+    </style>
+</head>
+<body>
+<div id="editor">//your C++ code goes here
+// VERSION GCC 4.9.2 , C++ 11
+// READ FROM STDIN, WRITE TO STDOUT
+
+#include &lt;iostream&gt;
+#include &lt;set&gt;
+using namespace std;
+
+int main(void)
+{
+    cout &lt;&lt; "hello world" &lt;&lt; '\n';
+    return 0;
+}    
+</div>
+        
+    <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/textmate");
+        editor.getSession().setMode("ace/mode/c_cpp");
+    </script>
+</body>
+</html>
