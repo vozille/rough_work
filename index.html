@@ -15,10 +15,34 @@
                 height: 390px;
                 border-width: 5px; 
             }
+       #dropMenu {
+       	position: absolute;
+        top: 180px;
+        left: 8px;
+        right: 0;
+        bottom: 0;
+       }
     </style>
 
 </head>
 <body>
-	<iframe src="./defaultEditors/editor_cpp.html" id = "editor"></iframe>
+	<div id = "dropMenu">
+		<select id="decision" onchange="foo()">
+		<option value="C" selected>C
+		<option value="CPP">C++
+		<option value="JAVA">Java
+		<option value="PYTHON">Python
+		</select>
+		<script type="text/javascript">
+			function foo(){
+				var list = (document.getElementById("decision"));
+				var fileCode = list.options[list.selectedIndex].value
+				edit = document.getElementById("editor");
+				edit.src = "./defaultEditors/editor"+fileCode+".html"
+			}
+		</script>
+	</div>
+	<iframe src="./defaultEditors/editorC.html" id = "editor"></iframe>
+
 </body>
 </html>
