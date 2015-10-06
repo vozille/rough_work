@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link type="text/css" rel="stylesheet" href="http://localhost:8080/executor/Interface/css/bootstrap.css" media="screen" />
+        <link type="text/css" rel="stylesheet" href="http://localhost:8080/executor/Interface/css/style.css" media="screen" />
+        <script type="text/javascript" src="http://localhost:8080/executor/Interface/js/jquery.js"></script>
+        <script type="text/javascript" src="http://localhost:8080/executor/Interface/js/bootstrap.js"></script> 
+        <script type="text/javascript" src="http://localhost:8080/executor/Interface/js/plugin.js"></script>
+        <script type="text/javascript">
+            $(window).load(function() {
+                if ($('#sidebar').height() < $('#mainbar').height())
+                    $('#sidebar').height($('#mainbar').height());
+            });
+        </script>
+        <title>Executor</title>
+        <link rel='shortcut icon' href='http://localhost:8080/executor/Interface/img/favicon.png' />
+    </head>
+    <body>
+                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://localhost:8080/executor/Interface">Executor-Home</a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- <li><a href="http://localhost:8080/executor/Interface/home">Home</a></li> -->
+                        <li><a href="http://localhost:8080/executor/Interface/problems">Problems</a></li>
+                        <li><a href="http://localhost:8080/executor/Interface/contests">Contests</a></li>
+                        <li><a href="http://localhost:8080/executor/Interface/rankings">Rankings</a></li>
+                        <li><a href="http://localhost:8080/executor/Interface/submissions">Submissions</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help <span class="caret"></span></a>
+                            <ul class="dropdown-menu navbar-nav navbar-inverse" role="menu">
+                                <li><a href="http://localhost:8080/executor/Interface/faq">FAQ</a></li>
+                                <li><a href="http://localhost:8080/executor/Interface/contact">Contact Us</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                                            <ul class="nav navbar-nav pull-right">
+                                                            <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Admin
+                                        <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href='http://localhost:8080/executor/Interface/adminjudge'>Judge Settings</a></li>
+                                        <li><a href='http://localhost:8080/executor/Interface/adminproblem'>Problem Settings</a></li>
+                                        <li><a href='http://localhost:8080/executor/Interface/admincontest'>Contest Settings</a></li>
+                                        <li><a href='http://localhost:8080/executor/Interface/adminteam'>Team Settings</a></li>
+                                        <li><a href='http://localhost:8080/executor/Interface/admingroup'>Group Settings</a></li>
+                                        <li><a href='http://localhost:8080/executor/Interface/adminclar'>Clarifications</a></li>
+                                        <li><a href='http://localhost:8080/executor/Interface/adminbroadcast'>Broadcast</a></li>
+                                        <li><a href='http://localhost:8080/executor/Interface/adminlog'>Request Logs</a></li>                                            
+                                    </ul>
+                                </li>                              
+                                                        <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Account
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href='http://localhost:8080/executor/Interface/edit'>Account Settings</a></li>
+                                    <li><a href='http://localhost:8080/executor/Interface/process.php?logout'>Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                                    </div>
+            </div> 
+        </nav> 
+        <div class="container bodycont">
+            <div class='row'>
+                <div class='col-md-9' id='mainbar'>
+                    <a class='btn btn-primary pull-right' style='margin-top: 10px;' href='http://localhost:8080/executor/Interface/adminproblem/ADD'><i class='glyphicon glyphicon-edit'></i> Edit</a><center><h1>Bond and Addition</h1></center><div style='text-align:left'><span class='btn-group'><a class='btn btn-primary' href='http://localhost:8080/executor/Interface/contests/test'><span class='glyphicon glyphicon-chevron-left'></span> Problems</a></span><span class='btn-group' style='float:right;'><a class='btn btn-primary' href='http://localhost:8080/executor/Interface/status/ADD,judge'>My Submissions</a><a class='btn btn-primary' href='http://localhost:8080/executor/Interface/status/ADD'>All Submissions</a><a class='btn btn-primary' href='http://localhost:8080/executor/Interface/submit/ADD'>Submit</a></span></div>
+            <br/><br/><p style="text-align: left;"><strong>Author:<br /></strong><em>Anwesh</em><em> Mohanty<br /></em><br /><strong>Statement :<br /><br /><em>Bond</em></strong> is a famous teacher in CET. CET is weird in the sense that students of one branch only study one subject. One of the favorite hobbies of <strong><em>Bond</em></strong> include making a list of numbers secured by students of a branch. As his name suggests, he likes to bond things together. So he joins all the numbers end to end. He does so for multiple branches. Finally he adds all such numbers and keeps the result. He gets a lot of satisfaction by looking at the resulting number.<br /><br />However since Bond is so busy , he is unable to indulge in his favorite hobby. Your task is to get the final result from the data bond has given you. Success would mean some grace marks in internals , so there's a lot at stake.<br /><br />Are you up to the mark for this tremendous undertaking ?<br /><br /><strong><strong>Input:<br /></strong></strong>First line contains an integer T, the number of testcases.<br />Next line contains an integer N, the number of branches.<br />Next N lines contain the following pattern:<br />An integer K denoting the number of students in the branch<br />K integers denoting the marks of each student.<br /><strong><br />Output:</strong><br />Print the Answer in a new line for each testcase<br /><br /><strong><strong>Constraints:<br /></strong></strong></p>
+<br><ul>
+<br><li><strong>1 &lt;= T &lt;= 100</strong></li>
+<br><li><strong>1 &lt;= N &lt;= 1000</strong></li>
+<br><li><strong><strong>1 &lt;= K &lt;= 1000</strong></strong></li>
+<br><li><strong><strong><strong>0 &lt;= marks &lt;= 100</strong></strong></strong></li>
+<br></ul>
+<br><p style="text-align: left;"><strong>Sample Input:<br /></strong>1<br />3<br />5<br />10 20 30 40 50<br />1<br />100<br />2<br />1 1<br /><br /><strong>Sample Output:<br /></strong>1020304161<br /><br /><strong>Explanation:</strong><strong><br /></strong>There are 3 Branches. First branch contains 3 students, Second has only 1 and 3rd has 2.<br />On joining the marks from end to end, for the first branch, we get the number 1020304050<br />Similarly we get 100 and 11.<br />On adding these 3 numbers, we get the required answer.</p><br/>
+                <b>Time Limit :</b> 1 Second(s)<br/><b>Score :</b> 50 Point(s)<br/><b>Input File Limit :</b> 50000 Bytes<br/><b>Languages Allowed :</b> AWK,Bash,Brain,C,C++,Java,C#,JavaScript,Pascal,Perl,PHP,Python,Python3,Ruby,Text<hr/><h3>Clarifications</h3><b><a href='http://localhost:8080/executor/Interface/teams/judge'>judge</a>:<br/>Q. i love you sai</b><br/><form role='form' method='post' action='http://localhost:8080/executor/Interface/process.php'>Access: <select style='width: 250px;' class='form-control' name='access'><option value='public' selected='selected' >Public</option><option value='deleted' >Deleted</option></select><br/><input type='hidden' name='tid' value='1' /><input type='hidden' name='pid' value='2' /><input type='hidden' name='time' value='1444022812' />
+<textarea class='form-control' name='reply' style='width: 450px; height: 100px;'></textarea><br/>
+<input type='submit' class='btn btn-primary' name='clarreply' value='Reply / Change Reply'/>
+</form>                    <hr/>
+                    <h3>Post Clarification</h3>
+                    <form action="http://localhost:8080/executor/Interface/process.php" role='form' method="post">
+                        <input type="hidden" value="2" name="pid" />
+                        <textarea class='form-control' style="width: 500px; height: 200px;" name="query"></textarea><br/>
+                        <input name="clar" type="submit" class="btn btn-primary" />
+                    </form><br/>
+                                    </div>
+                <div class='col-md-3'>
+                    <div id='sidebar'>
+                                <h4>Team</h4> 
+        <table class='table table-condensed'>
+            <tr><th>Team Name</th><th>Score</th><th>Overall Rank</th></tr>
+            <tr><td><a href='http://localhost:8080/executor/Interface/teams/judge'>judge</a></td><td>0</td><td style='text-align: center'>1</td></tr>        </table>
+                                <hr/>
+                        <h4>Contest Status</h4>
+                            <table class='table table-condensed'>
+        <tr><th>Mode</th><th>Judge</th><th>End Time</th></tr>
+        <tr><td><div id="ajax-contest-mode">
+                    Passive</div>
+            </td>
+            <td>
+                Offline            </td>
+            <td>
+                NA            </td>
+        </tr>
+    </table>
+                            
+                        <h4>Overall Rankings</h4><table class='table table-condensed elipsis_sizer'><tr><th>Rank</th><th>Name</th><th>Score</th></tr><tr><td>1</td><td><a href='http://localhost:8080/executor/Interface/teams/1'>1</a></td><td>0</td></tr><tr><td>2</td><td><a href='http://localhost:8080/executor/Interface/teams/2'>2</a></td><td>0</td></tr></table>                        
+                        <hr />
+                            <h4>My Submissions</h4>
+    <table class='table table-condensed'>
+        <tr><th>RID</th><th>Problem</th><th>Result</th></tr>
+        <tr><td><a href='http://localhost:8080/executor/Interface/viewsolution/16'>16</a></td><td><a href='http://localhost:8080/executor/Interface/problems/TEST'>Squares</a></td><td></td></tr>    </table>
+    <hr/>                        <hr/>
+                                            </div>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="http://perception.cetb.in" target="_blank">Perception 2015</a>
+            </div>
+        </div>
+    </body>
+</html>
