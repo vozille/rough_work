@@ -1,136 +1,2396 @@
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <link type="text/css" rel="stylesheet" href="http://localhost:8080/executor/Interface/css/bootstrap.css" media="screen" />
-        <link type="text/css" rel="stylesheet" href="http://localhost:8080/executor/Interface/css/style.css" media="screen" />
-        <script type="text/javascript" src="http://localhost:8080/executor/Interface/js/jquery.js"></script>
-        <script type="text/javascript" src="http://localhost:8080/executor/Interface/js/bootstrap.js"></script> 
-        <script type="text/javascript" src="http://localhost:8080/executor/Interface/js/plugin.js"></script>
-        <script type="text/javascript">
-            $(window).load(function() {
-                if ($('#sidebar').height() < $('#mainbar').height())
-                    $('#sidebar').height($('#mainbar').height());
-            });
-        </script>
-        <title>Executor</title>
-        <link rel='shortcut icon' href='http://localhost:8080/executor/Interface/img/favicon.png' />
-    </head>
-    <body>
-                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="http://localhost:8080/executor/Interface">Executor-Home</a>
-                </div>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="B:\website\bootstrap-3.3.5-dist\css\bootstrap.min.css" />
+<link rel="stylesheet" href="B:\website\sortable-0.8.0\css\sortable-theme-bootstrap.css" />
 
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav">
-                        <!-- <li><a href="http://localhost:8080/executor/Interface/home">Home</a></li> -->
-                        <li><a href="http://localhost:8080/executor/Interface/problems">Problems</a></li>
-                        <li><a href="http://localhost:8080/executor/Interface/contests">Contests</a></li>
-                        <li><a href="http://localhost:8080/executor/Interface/rankings">Rankings</a></li>
-                        <li><a href="http://localhost:8080/executor/Interface/submissions">Submissions</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help <span class="caret"></span></a>
-                            <ul class="dropdown-menu navbar-nav navbar-inverse" role="menu">
-                                <li><a href="http://localhost:8080/executor/Interface/faq">FAQ</a></li>
-                                <li><a href="http://localhost:8080/executor/Interface/contact">Contact Us</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                                            <ul class="nav navbar-nav pull-right">
-                                                            <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        Admin
-                                        <b class="caret"></b>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href='http://localhost:8080/executor/Interface/adminjudge'>Judge Settings</a></li>
-                                        <li><a href='http://localhost:8080/executor/Interface/adminproblem'>Problem Settings</a></li>
-                                        <li><a href='http://localhost:8080/executor/Interface/admincontest'>Contest Settings</a></li>
-                                        <li><a href='http://localhost:8080/executor/Interface/adminteam'>Team Settings</a></li>
-                                        <li><a href='http://localhost:8080/executor/Interface/admingroup'>Group Settings</a></li>
-                                        <li><a href='http://localhost:8080/executor/Interface/adminclar'>Clarifications</a></li>
-                                        <li><a href='http://localhost:8080/executor/Interface/adminbroadcast'>Broadcast</a></li>
-                                        <li><a href='http://localhost:8080/executor/Interface/adminlog'>Request Logs</a></li>                                            
-                                    </ul>
-                                </li>                              
-                                                        <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Account
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href='http://localhost:8080/executor/Interface/edit'>Account Settings</a></li>
-                                    <li><a href='http://localhost:8080/executor/Interface/process.php?logout'>Logout</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                                    </div>
-            </div> 
-        </nav> 
-        <div class="container bodycont">
-            <div class='row'>
-                <div class='col-md-9' id='mainbar'>
-                    <a class='btn btn-primary pull-right' style='margin-top: 10px;' href='http://localhost:8080/executor/Interface/adminproblem/ADD'><i class='glyphicon glyphicon-edit'></i> Edit</a><center><h1>Bond and Addition</h1></center><div style='text-align:left'><span class='btn-group'><a class='btn btn-primary' href='http://localhost:8080/executor/Interface/contests/test'><span class='glyphicon glyphicon-chevron-left'></span> Problems</a></span><span class='btn-group' style='float:right;'><a class='btn btn-primary' href='http://localhost:8080/executor/Interface/status/ADD,judge'>My Submissions</a><a class='btn btn-primary' href='http://localhost:8080/executor/Interface/status/ADD'>All Submissions</a><a class='btn btn-primary' href='http://localhost:8080/executor/Interface/submit/ADD'>Submit</a></span></div>
-            <br/><br/><p style="text-align: left;"><strong>Author:<br /></strong><em>Anwesh</em><em> Mohanty<br /></em><br /><strong>Statement :<br /><br /><em>Bond</em></strong> is a famous teacher in CET. CET is weird in the sense that students of one branch only study one subject. One of the favorite hobbies of <strong><em>Bond</em></strong> include making a list of numbers secured by students of a branch. As his name suggests, he likes to bond things together. So he joins all the numbers end to end. He does so for multiple branches. Finally he adds all such numbers and keeps the result. He gets a lot of satisfaction by looking at the resulting number.<br /><br />However since Bond is so busy , he is unable to indulge in his favorite hobby. Your task is to get the final result from the data bond has given you. Success would mean some grace marks in internals , so there's a lot at stake.<br /><br />Are you up to the mark for this tremendous undertaking ?<br /><br /><strong><strong>Input:<br /></strong></strong>First line contains an integer T, the number of testcases.<br />Next line contains an integer N, the number of branches.<br />Next N lines contain the following pattern:<br />An integer K denoting the number of students in the branch<br />K integers denoting the marks of each student.<br /><strong><br />Output:</strong><br />Print the Answer in a new line for each testcase<br /><br /><strong><strong>Constraints:<br /></strong></strong></p>
-<br><ul>
-<br><li><strong>1 &lt;= T &lt;= 100</strong></li>
-<br><li><strong>1 &lt;= N &lt;= 1000</strong></li>
-<br><li><strong><strong>1 &lt;= K &lt;= 1000</strong></strong></li>
-<br><li><strong><strong><strong>0 &lt;= marks &lt;= 100</strong></strong></strong></li>
-<br></ul>
-<br><p style="text-align: left;"><strong>Sample Input:<br /></strong>1<br />3<br />5<br />10 20 30 40 50<br />1<br />100<br />2<br />1 1<br /><br /><strong>Sample Output:<br /></strong>1020304161<br /><br /><strong>Explanation:</strong><strong><br /></strong>There are 3 Branches. First branch contains 3 students, Second has only 1 and 3rd has 2.<br />On joining the marks from end to end, for the first branch, we get the number 1020304050<br />Similarly we get 100 and 11.<br />On adding these 3 numbers, we get the required answer.</p><br/>
-                <b>Time Limit :</b> 1 Second(s)<br/><b>Score :</b> 50 Point(s)<br/><b>Input File Limit :</b> 50000 Bytes<br/><b>Languages Allowed :</b> AWK,Bash,Brain,C,C++,Java,C#,JavaScript,Pascal,Perl,PHP,Python,Python3,Ruby,Text<hr/><h3>Clarifications</h3>No Clarifications.<br>                    <hr/>
-                    <h3>Post Clarification</h3>
-                    <form action="http://localhost:8080/executor/Interface/process.php" role='form' method="post">
-                        <input type="hidden" value="2" name="pid" />
-                        <textarea class='form-control' style="width: 500px; height: 200px;" name="query"></textarea><br/>
-                        <input name="clar" type="submit" class="btn btn-primary" />
-                    </form><br/>
-                                    </div>
-                <div class='col-md-3'>
-                    <div id='sidebar'>
-                                <h4>Team</h4> 
-        <table class='table table-condensed'>
-            <tr><th>Team Name</th><th>Score</th><th>Overall Rank</th></tr>
-            <tr><td><a href='http://localhost:8080/executor/Interface/teams/judge'>judge</a></td><td>0</td><td style='text-align: center'>1</td></tr>        </table>
-                                <hr/>
-                        <h4>Contest Status</h4>
-                            <table class='table table-condensed'>
-        <tr><th>Mode</th><th>Judge</th><th>End Time</th></tr>
-        <tr><td><div id="ajax-contest-mode">
-                    Passive</div>
-            </td>
-            <td>
-                Offline            </td>
-            <td>
-                NA            </td>
-        </tr>
-    </table>
-                            
-                        <h4>Overall Rankings</h4><table class='table table-condensed elipsis_sizer'><tr><th>Rank</th><th>Name</th><th>Score</th></tr><tr><td>1</td><td><a href='http://localhost:8080/executor/Interface/teams/1'>1</a></td><td>0</td></tr><tr><td>2</td><td><a href='http://localhost:8080/executor/Interface/teams/2'>2</a></td><td>0</td></tr></table>                        
-                        <hr />
-                            <h4>My Submissions</h4>
-    <table class='table table-condensed'>
-        <tr><th>RID</th><th>Problem</th><th>Result</th></tr>
-        <tr><td><a href='http://localhost:8080/executor/Interface/viewsolution/16'>16</a></td><td><a href='http://localhost:8080/executor/Interface/problems/TEST'>Squares</a></td><td></td></tr>    </table>
-    <hr/>                        <hr/>
-                                            </div>
-                </div>
-            </div>
-            <div class="footer">
-                <a href="http://perception.cetb.in" target="_blank">Perception 2015</a>
-            </div>
+<script src="B:\website\jquery-1.11.3.min.js"></script>
+<script src= "B:\website\sortable-0.8.0\js\sortable.min.js"></script>
+<script src= "B:\website\bootstrap-3.3.5-dist\js\bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+    .foo{
+        font-size: 12px;
+    }
+</style>
+<body>
+
+<div id="content">
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"><a href="#sem1" data-toggle="tab">1st Semester</a></li>
+        <li><a href="#sem2" data-toggle="tab">2nd Semester</a></li>
+        <li><a href="#sem3" data-toggle="tab">3rd Semester</a></li>
+        <li><a href="#sem4" data-toggle="tab">4th Semester</a></li>
+    </ul>
+    <div id="my-tab-content" class="tab-content">
+        <div class="tab-pane active" id="sem1">
+            <table class="sortable-theme-bootstrap" data-sortable>
+C:\Python27\python.exe C:/Users/Admin/PycharmProjects/untitled2/updater.py
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Roll</th>
+                        <th>BASIC ELECTRICAL ENGINEERING</th>
+                        <th>THERMODYNAMICS</th>
+                        <th>PROGRAMMING IN C</th>
+                        <th>MATHEMATICS - I</th>
+                        <th>CHEMISTRY - I</th>
+                        <th>COMMUNICATIVE ENGLISH</th>
+                        <th>WORKSHOP PRACTICE</th>
+                        <th>CHEMISTRY LABORATORY</th>
+                        <th>BASIC ELECTRICAL LABORATORY</th>
+                        <th>PROGRAMMING IN C LABORATORY</th>
+                        <th>COMMUNICATIVE ENGLISH LABORATORY</th>
+                        <th>SGPA</th>
+                    </tr>
+                <thead>
+                <tbody>
+                    <tr>
+                        <td>PUNYA SLOKA DASH</td>
+                        <td>1301106008</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.71</td>
+                    </tr>
+
+                    <tr>
+                        <td>PALLAVI SAHA</td>
+                        <td>1301106016</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.75</td>
+                    </tr>
+
+                    <tr>
+                        <td>SWATISMITA PANDA</td>
+                        <td>1301106019</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>8.54</td>
+                    </tr>
+
+                    <tr>
+                        <td>BUDDHADEV BISWAL</td>
+                        <td>1301106022</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8</td>
+                    </tr>
+
+                    <tr>
+                        <td>HIMESH CHACHRA</td>
+                        <td>1301106026</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.75</td>
+                    </tr>
+
+                    <tr>
+                        <td>MANASI MURMU</td>
+                        <td>1301106027</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>7.82</td>
+                    </tr>
+
+                    <tr>
+                        <td>SUMAN PATRA</td>
+                        <td>1301106047</td>
+                        <td>B</td>
+                        <td>D</td>
+                        <td>F</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>6.93</td>
+                    </tr>
+
+                    <tr>
+                        <td>SWATANTRA SWAVIMAN DAS</td>
+                        <td>1301106050</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.68</td>
+                    </tr>
+
+                    <tr>
+                        <td>CHETANA NAYAK</td>
+                        <td>1301106052</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.86</td>
+                    </tr>
+
+                    <tr>
+                        <td>KAMLESH NAYAK</td>
+                        <td>1301106059</td>
+                        <td>O</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.96</td>
+                    </tr>
+
+                    <tr>
+                        <td>ARPITA CHOUDHURY</td>
+                        <td>1301106067</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.82</td>
+                    </tr>
+
+                    <tr>
+                        <td>PRIYANKA MAJHI</td>
+                        <td>1301106074</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>D</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>5.25</td>
+                    </tr>
+
+                    <tr>
+                        <td>ARIJIT BEHERA</td>
+                        <td>1301106075</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>D</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>7.86</td>
+                    </tr>
+
+                    <tr>
+                        <td>RAMYA ANWESHA</td>
+                        <td>1301106077</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.79</td>
+                    </tr>
+
+                    <tr>
+                        <td>ROHAN KUMAR MOHANTY</td>
+                        <td>1301106086</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.46</td>
+                    </tr>
+
+                    <tr>
+                        <td>RUTUPARNA SAHU</td>
+                        <td>1301106089</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.25</td>
+                    </tr>
+
+                    <tr>
+                        <td>KANHU CHARAN SAHOO</td>
+                        <td>1301106091</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>D</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>7.5</td>
+                    </tr>
+
+                    <tr>
+                        <td>RONAUK KUMAR MAHARANA</td>
+                        <td>1301106093</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.54</td>
+                    </tr>
+
+                    <tr>
+                        <td>DIBYASHA MOHANTY</td>
+                        <td>1301106099</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.43</td>
+                    </tr>
+
+                    <tr>
+                        <td>VISHANK PANIGRAHY</td>
+                        <td>1301106100</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>D</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>7.46</td>
+                    </tr>
+
+                    <tr>
+                        <td>SAI PRAJNA NAYAK</td>
+                        <td>1301106106</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.46</td>
+                    </tr>
+
+                    <tr>
+                        <td>DEEPTANEEL BHATTACHARYA</td>
+                        <td>1301106107</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.54</td>
+                    </tr>
+
+                    <tr>
+                        <td>PRITHV SINGH PRADHAN</td>
+                        <td>1301106111</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>9</td>
+                    </tr>
+
+                    <tr>
+                        <td>SWAPNIL SATPATHY</td>
+                        <td>1301106123</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>D</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.11</td>
+                    </tr>
+
+                    <tr>
+                        <td>DIGVIJAYA SATAPATHY</td>
+                        <td>1301106140</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.14</td>
+                    </tr>
+
+                    <tr>
+                        <td>NIKHANJ SOUMYA RATAN</td>
+                        <td>1301106144</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.43</td>
+                    </tr>
+
+                    <tr>
+                        <td>NIMISH MISHRA</td>
+                        <td>1301106153</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.79</td>
+                    </tr>
+
+                    <tr>
+                        <td>KHITIJA ACHARYA</td>
+                        <td>1301106171</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>8.39</td>
+                    </tr>
+
+                    <tr>
+                        <td>DIBYA RANJAN SWAIN</td>
+                        <td>1301106173</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.71</td>
+                    </tr>
+
+                    <tr>
+                        <td>ASHISH RANJAN SAHU</td>
+                        <td>1301106174</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.57</td>
+                    </tr>
+
+                    <tr>
+                        <td>PRABHUDUTTA SAHOO</td>
+                        <td>1301106186</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.5</td>
+                    </tr>
+
+                    <tr>
+                        <td>ONKAR MOHAPATRA</td>
+                        <td>1301106188</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.64</td>
+                    </tr>
+
+                    <tr>
+                        <td>SOURAV BANSAL</td>
+                        <td>1301106192</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>8.43</td>
+                    </tr>
+
+                    <tr>
+                        <td>PREETISH MOHANTY</td>
+                        <td>1301106201</td>
+                        <td>O</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.46</td>
+                    </tr>
+
+                    <tr>
+                        <td>STUTI MAHAPATRA</td>
+                        <td>1301106202</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.32</td>
+                    </tr>
+
+                    <tr>
+                        <td>PRASHANT KUMAR GHADAI</td>
+                        <td>1301106203</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>D</td>
+                        <td>D</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>4.95</td>
+                    </tr>
+
+                    <tr>
+                        <td>SWATO SOMA PARIDA</td>
+                        <td>1301106209</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>F</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.11</td>
+                    </tr>
+
+                    <tr>
+                        <td>RABI NARAYAN HANSDAH</td>
+                        <td>1301106216</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>F</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>7.32</td>
+                    </tr>
+
+                    <tr>
+                        <td>SANTA NIBEDITA</td>
+                        <td>1301106221</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.46</td>
+                    </tr>
+
+                    <tr>
+                        <td>SUSHREE PRIYANKA SETHY</td>
+                        <td>1301106231</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>7.86</td>
+                    </tr>
+
+                    <tr>
+                        <td>PRAVANJAN PADHIHARI</td>
+                        <td>1301106239</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.61</td>
+                    </tr>
+
+                    <tr>
+                        <td>ANWESH MOHANTY</td>
+                        <td>1301106240</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.89</td>
+                    </tr>
+
+                    <tr>
+                        <td>MANISH BEHERA</td>
+                        <td>1301106247</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.64</td>
+                    </tr>
+
+                    <tr>
+                        <td>SWADHIN SWADESH</td>
+                        <td>1301106252</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>8.93</td>
+                    </tr>
+
+                    <tr>
+                        <td>ANKITA MOHANTY</td>
+                        <td>1301106253</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>9.29</td>
+                    </tr>
+
+                    <tr>
+                        <td>SOUMIK RATH</td>
+                        <td>1301106255</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>9.14</td>
+                    </tr>
+
+                    <tr>
+                        <td>BIMALA SETHY</td>
+                        <td>1301106259</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>F</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>7.04</td>
+                    </tr>
+
+                    <tr>
+                        <td>PURU JAIN</td>
+                        <td>1301106265</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>F</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.29</td>
+                    </tr>
+
+                    <tr>
+                        <td>VISHAL SINGH</td>
+                        <td>1301106285</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.64</td>
+                    </tr>
+
+                    <tr>
+                        <td>PAYAL ROUT</td>
+                        <td>1301106286</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>9.04</td>
+                    </tr>
+
+                    <tr>
+                        <td>K SAIRAJ ACHARY</td>
+                        <td>1301106298</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.89</td>
+                    </tr>
+
+                    <tr>
+                        <td>ALOK KUMAR NAYAK</td>
+                        <td>1301106299</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>8.07</td>
+                    </tr>
+
+                    <tr>
+                        <td>AKASH MAHANTA</td>
+                        <td>1301106307</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>8.86</td>
+                    </tr>
+
+                    <tr>
+                        <td>NIKITA ROUT</td>
+                        <td>1301106310</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.93</td>
+                    </tr>
+
+                    <tr>
+                        <td>SWATI PARIDA</td>
+                        <td>1301106312</td>
+                        <td>C</td>
+                        <td>F</td>
+                        <td>D</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>5.61</td>
+                    </tr>
+
+                    <tr>
+                        <td>BANAMALI SETHY</td>
+                        <td>1301106313</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>7.96</td>
+                    </tr>
+
+                    <tr>
+                        <td>AMIT KUMAR BHUYAN</td>
+                        <td>1301106346</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>D</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>D</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>4.96</td>
+                    </tr>
+
+                    <tr>
+                        <td>DILIP KINDO</td>
+                        <td>1301106354</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>7.68</td>
+                    </tr>
+
+                    <tr>
+                        <td>NATASHA PRADHAN</td>
+                        <td>1301106358</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.89</td>
+                    </tr>
+
+                    <tr>
+                        <td>AYAN GHOSH</td>
+                        <td>1301106367</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>9.04</td>
+                    </tr>
+
+                    <tr>
+                        <td>SONAM BARWA</td>
+                        <td>1301106372</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.39</td>
+                    </tr>
+
+                    <tr>
+                        <td>GOUTAM BEHERA</td>
+                        <td>1301106381</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.75</td>
+                    </tr>
+
+                    <tr>
+                        <td>AMIT MAHAPATRA</td>
+                        <td>1301106403</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>8.21</td>
+                    </tr>
+
+                    <tr>
+                        <td>PRIYANKA SAHOO</td>
+                        <td>1301106405</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>D</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>7.96</td>
+                    </tr>
+
+                    <tr>
+                        <td>SHATAM PATRI</td>
+                        <td>1301106409</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.96</td>
+                    </tr>
+
+                    <tr>
+                        <td>AKASH KUMAR AGRAWAL</td>
+                        <td>1301106413</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.61</td>
+                    </tr>
+
+                    <tr>
+                        <td>PRIYARANJAN JENA</td>
+                        <td>1301106423</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>8.46</td>
+                    </tr>
+
+                    <tr>
+                        <td>POOJA BHAGAT</td>
+                        <td>1301106432</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>9.32</td>
+                    </tr>
+
+                    <tr>
+                        <td>SHANKARSHAN MURMU</td>
+                        <td>1301106434</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>8.29</td>
+                    </tr>
+
+                    <tr>
+                        <td>DURGAPRASAD SAHOO</td>
+                        <td>1301106439</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.71</td>
+                    </tr>
+
+                    <tr>
+                        <td>SWAGAT KUMAR MAHAPATRA</td>
+                        <td>1301106442</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.57</td>
+                    </tr>
+
+                    <tr>
+                        <td>SIDDHARTH GOUTAM</td>
+                        <td>1301106443</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.82</td>
+                    </tr>
+
+                    <tr>
+                        <td>MRUTYUNJAYA CHOUDHARY</td>
+                        <td>1301106445</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>D</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>D</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>7.79</td>
+                    </tr>
+
+                    <tr>
+                        <td>DAMAYANTI MAJHI</td>
+                        <td>1301106453</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>7.21</td>
+                    </tr>
+
+                    <tr>
+                        <td>BISWAJEET RAJ</td>
+                        <td>1301106463</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>9</td>
+                    </tr>
+
+                    <tr>
+                        <td>VIGNESH SAI</td>
+                        <td>1301106472</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.57</td>
+                    </tr>
+
+                    <tr>
+                        <td>RAMESH KUMAR CHOURASIA</td>
+                        <td>1301106481</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.64</td>
+                    </tr>
+
+                    <tr>
+                        <td>RAM MANAS</td>
+                        <td>1301106483</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.43</td>
+                    </tr>
+
+                    <tr>
+                        <td>SUNDARMOHAN BESRA</td>
+                        <td>1301106490</td>
+                        <td>D</td>
+                        <td>C</td>
+                        <td>F</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>6.68</td>
+                    </tr>
+
+                    <tr>
+                        <td>RAKESH ROSHAN DASH</td>
+                        <td>1301106499</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>D</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>8.93</td>
+                    </tr>
+
+                    <tr>
+                        <td>SHREYASH MISHRA</td>
+                        <td>1301106500</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.07</td>
+                    </tr>
+
+                    <tr>
+                        <td>MANOJ KUMAR BEHERA</td>
+                        <td>1301106513</td>
+                        <td>D</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>7.5</td>
+                    </tr>
+
+                    <tr>
+                        <td>SWETA SUCHARITA</td>
+                        <td>1301106526</td>
+                        <td>C</td>
+                        <td>B</td>
+                        <td>F</td>
+                        <td>D</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>6.82</td>
+                    </tr>
+
+                    <tr>
+                        <td>DIVYA JEEVAN MOHARANA</td>
+                        <td>1301106540</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>7.96</td>
+                    </tr>
+
+                    <tr>
+                        <td>SOMIA SAROJ TRIPATHY</td>
+                        <td>1301106546</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>D</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>7.93</td>
+                    </tr>
+
+                    <tr>
+                        <td>AISWARYA SAMANTARAY</td>
+                        <td>1301106554</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>D</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>8.14</td>
+                    </tr>
+
+                    <tr>
+                        <td>PRATIKSHYA PRIYADARSHINI</td>
+                        <td>1301106570</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>8.14</td>
+                    </tr>
+
+                    <tr>
+                        <td>PIYUSH SARANGI</td>
+                        <td>1301106575</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>D</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>7.43</td>
+                    </tr>
+
+                    <tr>
+                        <td>MOHD IMRAN</td>
+                        <td>1301106576</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>B</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.79</td>
+                    </tr>
+
+                    <tr>
+                        <td>ABHISEKO MISRA</td>
+                        <td>1301106579</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.5</td>
+                    </tr>
+
+                    <tr>
+                        <td>SACHIN PAN</td>
+                        <td>1301106582</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>B</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>8.04</td>
+                    </tr>
+
+                    <tr>
+                        <td>SANDEEP KUMAR SENAPATI</td>
+                        <td>1301106597</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>7.89</td>
+                    </tr>
+
+                    <tr>
+                        <td>TANMAY DASH</td>
+                        <td>1301106599</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>C</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>8.68</td>
+                    </tr>
+
+                    <tr>
+                        <td>ABHISHEK MANSINGH</td>
+                        <td>1301106600</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>9</td>
+                    </tr>
+
+                    <tr>
+                        <td>MINAL MISHRA</td>
+                        <td>1301106601</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>E</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>9</td>
+                    </tr>
+
+                    <tr>
+                        <td>SHASHWATA SAHOO</td>
+                        <td>1301106602</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>E</td>
+                        <td>8.68</td>
+                    </tr>
+
+                    <tr>
+                        <td>AJAY KUMAR DAS</td>
+                        <td>1421106080</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>AMIT KUMAR PANDA</td>
+                        <td>1421106081</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>ASUTOSH KUMAR SAHU</td>
+                        <td>1421106082</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>BANAMALI  MANDAL</td>
+                        <td>1421106083</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>BANI PRASAD SAHU</td>
+                        <td>1421106084</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>BIJAY BHASKAR PARIDA</td>
+                        <td>1421106085</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>BIJAYA KUMAR PARIDA</td>
+                        <td>1421106086</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>BINOD KUMAR NAG</td>
+                        <td>1421106087</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>BISWAJIT  CHAKRA</td>
+                        <td>1421106088</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>BISWAJIT  MISHRA</td>
+                        <td>1421106089</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>DEBASHISH  BEHERA</td>
+                        <td>1421106090</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>DEEPAK KUMAR SAHOO</td>
+                        <td>1421106091</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>DEEPESH KUMAR NAYAK</td>
+                        <td>1421106092</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>DIBYA RANJAN SAHOO</td>
+                        <td>1421106093</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>DILLIP KUMAR SAHOO</td>
+                        <td>1421106094</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>JAGABANDHU  SAHOO</td>
+                        <td>1421106095</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>KAIBALYA KUMAR DASH</td>
+                        <td>1421106096</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>KANHU CHARAN NAYAK</td>
+                        <td>1421106097</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>LOKANATH  MISHRA</td>
+                        <td>1421106098</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>MANOJ KUMAR BHANJA</td>
+                        <td>1421106099</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>MARTEEN  DAS</td>
+                        <td>1421106100</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>MASHAL CHANDRA SAHU</td>
+                        <td>1421106101</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>PRADOSH KUMAR JENA</td>
+                        <td>1421106102</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>PRIYABRAT  KANAR</td>
+                        <td>1421106103</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>PUSPANJALI  BEHERA</td>
+                        <td>1421106104</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>RAJAN  SINGH</td>
+                        <td>1421106105</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>RAKESH  SWAIN</td>
+                        <td>1421106106</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>RANJAN KUMAR NAYAK</td>
+                        <td>1421106107</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>RATNAKAR  DEBATA</td>
+                        <td>1421106108</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>SADANANDA  PAL</td>
+                        <td>1421106109</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>SANJAY KUMAR BARAL</td>
+                        <td>1421106110</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>SATYA SANKETA JENA</td>
+                        <td>1421106111</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>SOUMYA RANJAN SAHOO</td>
+                        <td>1421106112</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>SOUMYARANJAN  SWAIN</td>
+                        <td>1421106113</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>SRIMANTA  PANDA</td>
+                        <td>1421106114</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>SUBALA  SAHOO</td>
+                        <td>1421106115</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>SUNIL KUMAR SAHOO</td>
+                        <td>1421106116</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>SUNIT RANJAN PATTANAIK</td>
+                        <td>1421106117</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>SURYAKANTA  PALEI</td>
+                        <td>1421106118</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>SWARUPA KUMAR SAMANTARAY</td>
+                        <td>1421106119</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>UTTAM  MOHALIK</td>
+                        <td>1421106120</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </body>
+        <div class="tab-pane" id="sem2">
+
+        </div>
+        <div class="tab-pane" id="sem3">
+
+        </div>
+        <div class="tab-pane" id="sem4">
+
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+
+</body>
 </html>
+
