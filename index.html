@@ -3,169 +3,136 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!--     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
 
 </head>
 <style type="text/css">
-    .foo{
-        font-size: 12px;
-        width: 150px
-    }
-    .highlight1{
-        background-color: #B57EDC;
-    }
-    .highlight2{
-        background-color: #E6E6FA;
-    }
-    body{
-        background-color: #cacaca;
-    }
-    .header1{
-        background-color: #0c4f8b;
-        font-family: Courier, "Lucida Console", monospace; 
-        font-size: 60px;
-        font-weight: bolder;
-        color: #FFFFFF;
-        text-align: center;
-    }
-    .headerwrapper{
-    }
-    .wrapper{
-        padding-left: 30%;
-        text-align: center;
-    }
-    .header2{
-        background-color: #0c4f8b;
-        font-family: Courier, "Lucida Console", monospace; 
-        font-size: 30px;
-        font-weight: bolder;
-        color: #FFFFFF;
-        text-align: center;
-    }
-    .selectHeader{
-        font-family: Courier, "Lucida Console", monospace; 
-        font-size: 25px;
-        font-weight: bolder;
-    }
-    .compute{
-        color: #FFFFFF;
-        font-family: Courier, "Lucida Console", monospace; 
-        font-size: 35px;
-        font-weight: bolder;
-        background-color: #03a343;
-    }
-    .selectBody{
-        text-align: center;
-        font-weight: bolder;
-        font-size: 20px;
-    }
-    .form-control{
-        font-size: 30px;
-    }
-    .mainbody{
-        padding-left: 13%;
-        width: 80vw;
-    }
-    .textbox{
-        background-color: #c6c49c;
-        font-size: 20px;
-        font-family: Courier, "Lucida Console", monospace;
-        font-weight: bolder;
-    }
-    .textbox2{
-        resize: none;
-        text-align: center;
-        font-family: Courier, "Lucida Console", monospace;
-        font-weight: bolder;
-    }
+
+	body{
+		background-color: #b3edff;
+	}
+
+	.outer {
+		margin-left: 20%;
+	    margin-right: 20%; 
+		text-align: center;
+	    background: url("./first-snowfall.jpg");
+	    background-size: cover;
+	}
+
+	.inner {
+		font-family: cursive;
+		font-size: 32px;
+		font-weight: bolder;
+		color: #FFFFFF;
+		height: 100vh;
+	}
 </style>
+
 <body>
-
-<div class="header1" disabled>Temperature Converter</div>
-<br>
-<br>
-
-<br>
-<div class="mainbody">
-    <div class="btn-group wrapper dropdown-select">
-        <button type="button " class="btn btn-primary dropdown-toggle selectHeader" data-toggle="dropdown">          Celsius          <span class="caret"></span></button>
-        <ul class="dropdown-menu dropdown-menu-right" id="options">
-            <li class="selectBody" id="1"><a href="#">Celsius </a></li>
-            <li class="divider"></li>
-            <li class="selectBody" id="2"><a href="#">Fahrenheit </a></li>
-            <li class="divider"></li>
-            <li class="selectBody" id="3"><a href="#">Kelvin </a></li>
-        </ul>
-    </div>
-    <br>
-    <br>
-    <div class="form-group">
-        <textarea class="form-control textbox2" rows="1" id="value"></textarea>
-    </div>
-
-    <div class="btn-group wrapper dropdown-select" id="convert">
-        <button type="button" class="btn btn-default compute">Convert</button>
-    </div>
-    <br>
-    <br>
-    <div>
-        <textarea class="form-control textbox" rows="3" id="answer" readonly></textarea>
-    </div>
+<div class="outer">
+	<div class="inner">
+		You came into my life like a snowflake Sai.<br>
+		Beautiful, Quiet and Unique<br>
+		Falling gently from the shining skies<br>
+		To my world below
+		<canvas id="canvas"></canvas>
+	</div>
 </div>
+
 <script type="text/javascript">
-    //set default to celsius
-    var id = 1;
-    $('.dropdown-select').on( 'click', '.dropdown-menu li a', function() { 
-       var target = $(this).html();
-
-       //Adds active class to selected item
-       $(this).parents('.dropdown-menu').find('li').removeClass('active');
-       $(this).parent('li').addClass('active');
-
-       //Displays selected text on dropdown-toggle button
-       id = $(this).parents('li').attr('id');
-       $(this).parents('.dropdown-select').find('.dropdown-toggle').html(target + ' <span class="caret"></span>');
-    });
-    $('#convert').click(function() {
-        try{
-            var value = eval($('#value').val());
-            var a,b,c;
-            // celsius
-            if(id == 1){
-                a = value;
-                b = value*9/5 + 32;
-                c = value + 273.15;
-            }
-            if(id == 2){
-                b = value;
-                a = (b - 32)*5/9;
-                c = a - 273.15;
-            }
-            if(id == 3){
-                c = value;
-                a = value + 273.15;
-                b = a*9/5 + 32;
-            }
-            $('#answer').val('');
-            if(c < 0){
-                $('#answer').val('Temperature cannot be less than absolute zero');
-            }
-            else{
-                $('#answer').val('T Celsius is : ' + a + '\n' + 
-                    'T Fahrenheit is : ' + b + '\n' +
-                    'T Kelvin is : ' + c);
-            }
-        }
-        catch(e){
-            $('#answer').val('');
-            alert("Undefined Input");
-        }
-    });
+	window.onload = function(){
+		//canvas init
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		
+		//canvas dimensions
+		var W = window.innerWidth;
+		var H = window.innerHeight;
+		canvas.width = W;
+		canvas.height = H;
+		
+		//snowflake particles
+		var mp = 25; //max particles
+		var particles = [];
+		for(var i = 0; i < mp; i++)
+		{
+			particles.push({
+				x: Math.random()*W, //x-coordinate
+				y: Math.random()*H, //y-coordinate
+				r: Math.random()*4+1, //radius
+				d: Math.random()*mp //density
+			})
+		}
+		
+		//Lets draw the flakes
+		function draw()
+		{
+			ctx.clearRect(0, 0, W, H);
+			
+			ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+			ctx.beginPath();
+			for(var i = 0; i < mp; i++)
+			{
+				var p = particles[i];
+				ctx.moveTo(p.x, p.y);
+				ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
+			}
+			ctx.fill();
+			update();
+		}
+		
+		//Function to move the snowflakes
+		//angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
+		var angle = 0;
+		function update()
+		{
+			angle += 0.01;
+			for(var i = 0; i < mp; i++)
+			{
+				var p = particles[i];
+				//Updating X and Y coordinates
+				//We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
+				//Every particle has its own density which can be used to make the downward movement different for each flake
+				//Lets make it more random by adding in the radius
+				p.y += Math.cos(angle+p.d) + 1 + p.r/2;
+				p.x += Math.sin(angle) * 2;
+				
+				//Sending flakes back from the top when it exits
+				//Lets make it a bit more organic and let flakes enter from the left and right also.
+				if(p.x > W+5 || p.x < -5 || p.y > H)
+				{
+					if(i%3 > 0) //66.67% of the flakes
+					{
+						particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d};
+					}
+					else
+					{
+						//If the flake is exitting from the right
+						if(Math.sin(angle) > 0)
+						{
+							//Enter from the left
+							particles[i] = {x: -5, y: Math.random()*H, r: p.r, d: p.d};
+						}
+						else
+						{
+							//Enter from the right
+							particles[i] = {x: W+5, y: Math.random()*H, r: p.r, d: p.d};
+						}
+					}
+				}
+			}
+		}
+		
+		//animation loop
+		setInterval(draw, 33);
+	}
 
 </script>
 
 </body>
+
 </html>
 
