@@ -495,3 +495,230 @@ end
 
 ##### SOURCE END #####
 --></body></html>
+
+
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Integration of a function</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-04-23"><meta name="DC.source" content="integrate.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Integration of a function</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#3">The input function is</a></li><li><a href="#5">The code executed in the command window is</a></li></ul></div><p>In mathematics, an integral assigns numbers to functions in a way that can describe displacement, area, volume, and other concepts that arise by combining infinitesimal data. Integration is one of the two main operations of calculus, with its inverse, differentiation, being the other. Given a function f of a real variable x and an interval [a, b] of the real line, the definite integral</p><p><img src="integrate_eq06713.png" alt="$$ \int_a^b \! f(x)\,dx $$"> is defined informally as the signed area of the region in the xy-plane that is bounded by the graph of f, the x-axis and the vertical lines x = a and x = b. The area above the x-axis adds to the total and that below the x-axis subtracts from the total.</p><pre class="codeinput"><span class="keyword">function</span> output = integrate(f)
+<span class="comment">% This is used to integrate a function</span>
+<span class="comment">% f = orignial function</span>
+<span class="comment">% output = derivative of function</span>
+<span class="comment">% By CET Mechanical Section A 2017 batch</span>
+    output = int(f);
+<span class="keyword">end</span>
+</pre><pre class="codeoutput"> 
+ans =
+ 
+x/2 - sin(2*x)/4 - x^3
+ 
+</pre><h2>The input function is<a name="3"></a></h2><p><img src="integrate_eq52626.png" alt="$$ sin^{2}(x) - 3x^{2} $$"></p><h2>The code executed in the command window is<a name="5"></a></h2><pre class="language-matlab">syms <span class="string">x</span>;
+f = sin(x).^2 - 3*(x*x);
+differetiate(f)
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Integration of a function
+%%
+% In mathematics, an integral assigns numbers to functions in a way that can describe displacement, area, volume, and other concepts that arise by combining infinitesimal data. Integration is one of the two main operations of calculus, with its inverse, differentiation, being the other. Given a function f of a real variable x and an interval [a, b] of the real line, the definite integral
+%
+% $$ \int_a^b \! f(x)\,dx $$
+% is defined informally as the signed area of the region in the xy-plane that is bounded by the graph of f, the x-axis and the vertical lines x = a and x = b. The area above the x-axis adds to the total and that below the x-axis subtracts from the total.
+%%
+function output = integrate(f)
+% This is used to integrate a function
+% f = orignial function
+% output = derivative of function
+% By CET Mechanical Section A 2017 batch
+    output = int(f);
+end
+%% The input function is
+% $$ sin^{2}(x) - 3x^{2} $$
+%%
+%% The code executed in the command window is
+%   syms x;
+%   f = sin(x).^2 - 3*(x*x);
+%   differetiate(f)
+%%
+##### SOURCE END #####
+--></body></html>
+
+
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Differentiation of a function</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-04-23"><meta name="DC.source" content="differetiate.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Differentiation of a function</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#3">The input function is</a></li><li><a href="#5">The code executed in the command window is</a></li></ul></div><p>In calculus, the differential represents the principal part of the change in a function <img src="differetiate_eq01253.png" alt="$$ y = f(x) $$"> with respect to changes in the independent variable. The differential dy is defined by</p><p><img src="differetiate_eq77293.png" alt="$$ dy = f'(x)\,dx, $$"> where <img src="differetiate_eq46999.png" alt="$$ f'(x) $$"> is the derivative of f with respect to x, and dx is an additional real variable (so that <i>dy</i> is a function of x and <i>dx</i>). The notation is such that the equation</p><p><img src="differetiate_eq32313.png" alt="$$ dy = \frac{dy}{dx}\, dx $$"> holds, where the derivative is represented in the Leibniz notation <img src="differetiate_eq49964.png" alt="$$ dy/dx, $$"> and this is consistent with regarding the derivative as the quotient of the differentials. One also writes</p><p><img src="differetiate_eq34255.png" alt="$$ df(x) = f'(x)\,dx. $$"></p><pre class="codeinput"><span class="keyword">function</span> output = differetiate(f)
+<span class="comment">% This is used to differentiate a function</span>
+<span class="comment">% f = orignial function</span>
+<span class="comment">% output = derivative of function</span>
+<span class="comment">% By CET Mechanical Section A 2017 batch</span>
+    output = diff(f);
+<span class="keyword">end</span>
+</pre><pre class="codeoutput"> 
+ans =
+ 
+2*cos(x)*sin(x) - 6*x
+ 
+</pre><h2>The input function is<a name="3"></a></h2><p><img src="differetiate_eq52626.png" alt="$$ sin^{2}(x) - 3x^{2} $$"></p><h2>The code executed in the command window is<a name="5"></a></h2><pre class="language-matlab">syms <span class="string">x</span>;
+f = sin(x).^2 - 3*(x*x);
+differetiate(f)
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Differentiation of a function
+%%
+%%
+% In calculus, the differential represents the principal part of the change in a function $$ y = f(x) $$ with respect to changes in the independent variable. The differential dy is defined by
+%
+% $$ dy = f'(x)\,dx, $$
+% where $$ f'(x) $$ is the derivative of f with respect to x, and dx is an additional real variable (so that _dy_ is a function of x and _dx_). The notation is such that the equation
+%
+% $$ dy = \frac{dy}{dx}\, dx $$
+% holds, where the derivative is represented in the Leibniz notation $$ dy/dx, $$ and this is consistent with regarding the derivative as the quotient of the differentials. One also writes
+%
+% $$ df(x) = f'(x)\,dx. $$
+%%
+function output = differetiate(f)
+% This is used to differentiate a function
+% f = orignial function
+% output = derivative of function
+% By CET Mechanical Section A 2017 batch
+    output = diff(f);
+end
+%% The input function is
+% $$ sin^{2}(x) - 3x^{2} $$
+%%
+%% The code executed in the command window is
+%   syms x;
+%   f = sin(x).^2 - 3*(x*x);
+%   differetiate(f)
+%%
+
+##### SOURCE END #####
+--></body></html>
