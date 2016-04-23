@@ -1,141 +1,493 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-    <script src="snowstorm.js"></script>
 
-</head>
-<style type="text/css">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Bisection</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-04-23"><meta name="DC.source" content="Bisection.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
-	body{
-		background-color: #b3edff;
-	}
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
 
-	.outer {
-		margin-left: 2%;
-	    margin-right: 2%; 
-		text-align: center;
-	    background: url("./first-snowfall.jpg");
-	    background-size: cover;
-	}
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
 
-	.inner {
-		font-family: cursive;
-		font-size: 26px;
-		font-weight: bolder;
-		color: #FFFFFF;
-		height: 100%;
-	}
-</style>
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
 
-<body>
-<div class="outer">
-	<div class="inner">
-		<br>
-		<br>
-		You came into my life like a snowflake.<br>
-		Beautiful, Quiet and Unique<br>
-		Falling gently from the shining skies<br>
-		To my world below.<br>
-		<canvas id="canvas"></canvas>
-	</div>
-</div>
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
 
-<script type="text/javascript">
-	window.onload = function(){
-		//canvas init
-		var canvas = document.getElementById("canvas");
-		var ctx = canvas.getContext("2d");
-		
-		//canvas dimensions
-		var W = window.innerWidth;
-		var H = window.innerHeight;
-		canvas.width = W;
-		canvas.height = H;
-		
-		//snowflake particles
-		var mp = 25; //max particles
-		var particles = [];
-		for(var i = 0; i < mp; i++)
-		{
-			particles.push({
-				x: Math.random()*W, //x-coordinate
-				y: Math.random()*H, //y-coordinate
-				r: Math.random()*4+1, //radius
-				d: Math.random()*mp //density
-			})
-		}
-		
-		//Lets draw the flakes
-		function draw()
-		{
-			ctx.clearRect(0, 0, W, H);
-			
-			ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
-			ctx.beginPath();
-			for(var i = 0; i < mp; i++)
-			{
-				var p = particles[i];
-				ctx.moveTo(p.x, p.y);
-				ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
-			}
-			ctx.fill();
-			update();
-		}
-		
-		//Function to move the snowflakes
-		//angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
-		var angle = 0;
-		function update()
-		{
-			angle += 0.01;
-			for(var i = 0; i < mp; i++)
-			{
-				var p = particles[i];
-				//Updating X and Y coordinates
-				//We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
-				//Every particle has its own density which can be used to make the downward movement different for each flake
-				//Lets make it more random by adding in the radius
-				p.y += Math.cos(angle+p.d) + 1 + p.r/2;
-				p.x += Math.sin(angle) * 2;
-				
-				//Sending flakes back from the top when it exits
-				//Lets make it a bit more organic and let flakes enter from the left and right also.
-				if(p.x > W+5 || p.x < -5 || p.y > H)
-				{
-					if(i%3 > 0) //66.67% of the flakes
-					{
-						particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d};
-					}
-					else
-					{
-						//If the flake is exitting from the right
-						if(Math.sin(angle) > 0)
-						{
-							//Enter from the left
-							particles[i] = {x: -5, y: Math.random()*H, r: p.r, d: p.d};
-						}
-						else
-						{
-							//Enter from the right
-							particles[i] = {x: W+5, y: Math.random()*H, r: p.r, d: p.d};
-						}
-					}
-				}
-			}
-		}
-		
-		//animation loop
-		setInterval(draw, 33);
-	}
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
 
-</script>
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
 
-</body>
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
 
-</html>
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
 
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="keyword">function</span> [output] = Bisection(func, a, b)
+<span class="comment">% f = orignial function</span>
+<span class="comment">% a,b = the original boundary values</span>
+<span class="comment">% output = final answer</span>
+<span class="comment">% By CET Mechanical A 2017</span>
+f = matlabFunction(func); <span class="comment">% symbolic function to mathematical function</span>
+r = []; <span class="comment">% stores all the points, useful for plotting</span>
+<span class="keyword">while</span> 1 &gt; 0 <span class="comment">% Run till f(x) is not sufficiently close to zero</span>
+    x = (a+b)/2;
+    r = [r x];
+    <span class="keyword">if</span> abs(f(x)) &lt; 10^-10 <span class="comment">% f(x) is close to zero, exit loop</span>
+        <span class="keyword">break</span>
+    <span class="keyword">end</span>
+    <span class="keyword">if</span> f(x)*f(a) &gt;= 0
+        a = x;
+    <span class="keyword">end</span>
+    <span class="keyword">if</span> f(x)*f(b) &gt;= 0
+        b = x;
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+output = r;
+<span class="keyword">end</span>
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function [output] = Bisection(func, a, b)
+% f = orignial function
+% a,b = the original boundary values
+% output = final answer
+% By CET Mechanical A 2017
+f = matlabFunction(func); % symbolic function to mathematical function
+r = []; % stores all the points, useful for plotting
+while 1 > 0 % Run till f(x) is not sufficiently close to zero
+    x = (a+b)/2;
+    r = [r x];
+    if abs(f(x)) < 10^-10 % f(x) is close to zero, exit loop
+        break
+    end
+    if f(x)*f(a) >= 0
+        a = x;
+    end
+    if f(x)*f(b) >= 0
+        b = x;
+    end
+end
+output = r;
+end
+
+##### SOURCE END #####
+--></body></html>
+
+
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Secant</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-04-23"><meta name="DC.source" content="Secant.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="keyword">function</span> [output] = Secant(func)
+<span class="comment">% f = orignial function</span>
+<span class="comment">% x0, x1, x2 = iterative values</span>
+<span class="comment">% output = final answer</span>
+<span class="comment">% By CET Mechanical A 2017</span>
+f = matlabFunction(func); <span class="comment">% symbolic function to mathematical function</span>
+x0 = -1000000; <span class="comment">% assign any random value such that |x1 - x0| is large</span>
+x1 = 1000000; <span class="comment">% assign any random value such that |x1 - x0| is large</span>
+a = []; <span class="comment">% stores all the points , useful for plotting</span>
+<span class="keyword">for</span> i = 1:1000000 <span class="comment">% do iteration lot of times to increase accuracy</span>
+    denominator = f(x1) - f(x0);
+    <span class="keyword">if</span> abs(denominator) &lt; 10^-30 <span class="comment">% denominator approaching zero, so exit</span>
+        <span class="keyword">break</span>
+    <span class="keyword">end</span>
+    x2 = x1 - f(x1)*(x1 - x0)/denominator;
+    x0 = x1; <span class="comment">% basically moving forward to x3,x4,etc</span>
+    x1 = x2;
+    a = [a, x2];
+<span class="keyword">end</span>
+output = a;
+<span class="keyword">end</span>
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function [output] = Secant(func)
+% f = orignial function
+% x0, x1, x2 = iterative values
+% output = final answer
+% By CET Mechanical A 2017
+f = matlabFunction(func); % symbolic function to mathematical function
+x0 = -1000000; % assign any random value such that |x1 - x0| is large
+x1 = 1000000; % assign any random value such that |x1 - x0| is large
+a = []; % stores all the points , useful for plotting
+for i = 1:1000000 % do iteration lot of times to increase accuracy
+    denominator = f(x1) - f(x0);
+    if abs(denominator) < 10^-30 % denominator approaching zero, so exit
+        break
+    end
+    x2 = x1 - f(x1)*(x1 - x0)/denominator;
+    x0 = x1; % basically moving forward to x3,x4,etc
+    x1 = x2;
+    a = [a, x2];
+end
+output = a;
+end
+
+##### SOURCE END #####
+--></body></html>
+
+
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>NewtonRapson</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-04-23"><meta name="DC.source" content="NewtonRapson.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="keyword">function</span> [output] = NewtonRapson(func)
+<span class="comment">% This is used to calculate a root of a function func using Newton Rapson</span>
+<span class="comment">% f = orignial function</span>
+<span class="comment">% g = derivative of f</span>
+<span class="comment">% x0, x1 = iterative values</span>
+<span class="comment">% output = final answer</span>
+<span class="comment">% By CET Mechanical Section A 2017 batch</span>
+f = matlabFunction(func);
+g = matlabFunction(diff(func));
+x0 = 0; <span class="comment">% assign any random value</span>
+a = []; <span class="comment">% stores all the points, useful for plotting</span>
+<span class="keyword">for</span> i = 1:10000 <span class="comment">% do iteration lot of times to increase accuracy</span>
+    a = [a x0];
+    <span class="keyword">if</span> g(x0) == 0 <span class="comment">% we have reached the root</span>
+        <span class="keyword">break</span>
+    <span class="keyword">end</span>
+    x1 = x0 - f(x0)/g(x0);
+    <span class="keyword">if</span> abs(x1 - x0) &lt; 10^-30 <span class="comment">%too small a difference, so stop</span>
+        <span class="keyword">break</span>
+    <span class="keyword">end</span>
+    x0 = x1; <span class="comment">% basically x0 becomes x1, next time x0 becomes x2, etc</span>
+<span class="keyword">end</span>
+output = a;
+<span class="keyword">end</span>
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function [output] = NewtonRapson(func)
+% This is used to calculate a root of a function func using Newton Rapson
+% f = orignial function
+% g = derivative of f
+% x0, x1 = iterative values
+% output = final answer
+% By CET Mechanical Section A 2017 batch
+f = matlabFunction(func);
+g = matlabFunction(diff(func));
+x0 = 0; % assign any random value
+a = []; % stores all the points, useful for plotting
+for i = 1:10000 % do iteration lot of times to increase accuracy
+    a = [a x0];
+    if g(x0) == 0 % we have reached the root
+        break
+    end
+    x1 = x0 - f(x0)/g(x0);
+    if abs(x1 - x0) < 10^-30 %too small a difference, so stop
+        break
+    end
+    x0 = x1; % basically x0 becomes x1, next time x0 becomes x2, etc
+end
+output = a;
+end
+
+##### SOURCE END #####
+--></body></html>
+
+
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>GaussElimination</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-04-23"><meta name="DC.source" content="GaussElimination.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="keyword">function</span> [output] = GaussElimination(coefficients, constants)
+<span class="comment">% coefficients = the coefficient matrix of variables</span>
+<span class="comment">% constants = the matrix of all the constant terms in equation when in RHS</span>
+<span class="comment">% n = number of equations</span>
+<span class="comment">% values = array storing the values of all variables in equation</span>
+<span class="comment">% By CET Mechanical A 2017</span>
+<span class="comment">%</span>
+n = length(constants);
+values = zeros(n,1); <span class="comment">% 1 dimensional array to store coeffcients</span>
+<span class="comment">% Forward Elimination which converts matrix to RREF</span>
+<span class="keyword">for</span> k = 1:n - 1
+    <span class="keyword">for</span> i = k + 1:n
+        c = coefficients(i,k)/coefficients(k,k); <span class="comment">% A constant factor</span>
+        <span class="keyword">for</span> j = k + 1:n
+            coefficients(i,j) = coefficients(i,j) - c*coefficients(k,j);
+        <span class="keyword">end</span>
+        constants(i) = constants(i) - c*constants(k);
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+<span class="comment">% Back Substitution</span>
+<span class="comment">% Get value of one variable, substitute in next equation and continue till</span>
+<span class="comment">% we get the values of all variables</span>
+values(n) = constants(n)/coefficients(n,n);
+<span class="keyword">for</span> i = n - 1:-1:1
+    s = constants(i);
+    <span class="keyword">for</span> j = i+1:n
+        s = s - coefficients(i,j)*values(j);
+    <span class="keyword">end</span>
+    values(i) = s/coefficients(i,i);
+<span class="keyword">end</span>
+output = values;
+<span class="keyword">end</span>
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function [output] = GaussElimination(coefficients, constants)
+% coefficients = the coefficient matrix of variables
+% constants = the matrix of all the constant terms in equation when in RHS
+% n = number of equations
+% values = array storing the values of all variables in equation
+% By CET Mechanical A 2017
+%
+n = length(constants);
+values = zeros(n,1); % 1 dimensional array to store coeffcients
+% Forward Elimination which converts matrix to RREF
+for k = 1:n - 1
+    for i = k + 1:n
+        c = coefficients(i,k)/coefficients(k,k); % A constant factor
+        for j = k + 1:n
+            coefficients(i,j) = coefficients(i,j) - c*coefficients(k,j);
+        end
+        constants(i) = constants(i) - c*constants(k);
+    end
+end
+% Back Substitution
+% Get value of one variable, substitute in next equation and continue till
+% we get the values of all variables
+values(n) = constants(n)/coefficients(n,n);
+for i = n - 1:-1:1
+    s = constants(i);
+    for j = i+1:n
+        s = s - coefficients(i,j)*values(j);
+    end
+    values(i) = s/coefficients(i,i);
+end
+output = values;
+end
+
+##### SOURCE END #####
+--></body></html>
