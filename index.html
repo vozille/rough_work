@@ -8,7 +8,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Bisection</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-04-23"><meta name="DC.source" content="Bisection.m"><style type="text/css">
+      --><title>Matlab Codes</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-04-23"><meta name="DC.source" content="Bisection.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -564,29 +564,16 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Integration of a function</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#3">The input function is</a></li><li><a href="#5">The code executed in the command window is</a></li></ul></div><p>In mathematics, an integral assigns numbers to functions in a way that can describe displacement, area, volume, and other concepts that arise by combining infinitesimal data. Integration is one of the two main operations of calculus, with its inverse, differentiation, being the other. Given a function f of a real variable x and an interval [a, b] of the real line, the definite integral</p><p><img src="integrate_eq06713.png" alt="$$ \int_a^b \! f(x)\,dx $$"> is defined informally as the signed area of the region in the xy-plane that is bounded by the graph of f, the x-axis and the vertical lines x = a and x = b. The area above the x-axis adds to the total and that below the x-axis subtracts from the total.</p><pre class="codeinput"><span class="keyword">function</span> output = integrate(f)
+  </style></head><body><div class="content"><h1>Integration of a function</h1><!--introduction--><!--/introduction--><pre class="codeinput"><span class="keyword">function</span> output = integrate(f)
 <span class="comment">% This is used to integrate a function</span>
 <span class="comment">% f = orignial function</span>
 <span class="comment">% output = derivative of function</span>
 <span class="comment">% By CET Mechanical Section A 2017 batch</span>
     output = int(f);
 <span class="keyword">end</span>
-</pre><pre class="codeoutput"> 
-ans =
- 
-x/2 - sin(2*x)/4 - x^3
- 
-</pre><h2>The input function is<a name="3"></a></h2><p><img src="integrate_eq52626.png" alt="$$ sin^{2}(x) - 3x^{2} $$"></p><h2>The code executed in the command window is<a name="5"></a></h2><pre class="language-matlab">syms <span class="string">x</span>;
-f = sin(x).^2 - 3*(x*x);
-differetiate(f)
 </pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Integration of a function
-%%
-% In mathematics, an integral assigns numbers to functions in a way that can describe displacement, area, volume, and other concepts that arise by combining infinitesimal data. Integration is one of the two main operations of calculus, with its inverse, differentiation, being the other. Given a function f of a real variable x and an interval [a, b] of the real line, the definite integral
-%
-% $$ \int_a^b \! f(x)\,dx $$
-% is defined informally as the signed area of the region in the xy-plane that is bounded by the graph of f, the x-axis and the vertical lines x = a and x = b. The area above the x-axis adds to the total and that below the x-axis subtracts from the total.
 %%
 function output = integrate(f)
 % This is used to integrate a function
@@ -595,16 +582,9 @@ function output = integrate(f)
 % By CET Mechanical Section A 2017 batch
     output = int(f);
 end
-%% The input function is
-% $$ sin^{2}(x) - 3x^{2} $$
-%%
-%% The code executed in the command window is
-%   syms x;
-%   f = sin(x).^2 - 3*(x*x);
-%   differetiate(f)
-%%
 ##### SOURCE END #####
 --></body></html>
+
 
 
 
@@ -674,35 +654,16 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Differentiation of a function</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#3">The input function is</a></li><li><a href="#5">The code executed in the command window is</a></li></ul></div><p>In calculus, the differential represents the principal part of the change in a function <img src="differetiate_eq01253.png" alt="$$ y = f(x) $$"> with respect to changes in the independent variable. The differential dy is defined by</p><p><img src="differetiate_eq77293.png" alt="$$ dy = f'(x)\,dx, $$"> where <img src="differetiate_eq46999.png" alt="$$ f'(x) $$"> is the derivative of f with respect to x, and dx is an additional real variable (so that <i>dy</i> is a function of x and <i>dx</i>). The notation is such that the equation</p><p><img src="differetiate_eq32313.png" alt="$$ dy = \frac{dy}{dx}\, dx $$"> holds, where the derivative is represented in the Leibniz notation <img src="differetiate_eq49964.png" alt="$$ dy/dx, $$"> and this is consistent with regarding the derivative as the quotient of the differentials. One also writes</p><p><img src="differetiate_eq34255.png" alt="$$ df(x) = f'(x)\,dx. $$"></p><pre class="codeinput"><span class="keyword">function</span> output = differetiate(f)
+  </style></head><body><div class="content"><h1>Differentiation of a function</h1><!--introduction--><!--/introduction--><pre class="codeinput"><span class="keyword">function</span> output = differetiate(f)
 <span class="comment">% This is used to differentiate a function</span>
 <span class="comment">% f = orignial function</span>
 <span class="comment">% output = derivative of function</span>
 <span class="comment">% By CET Mechanical Section A 2017 batch</span>
     output = diff(f);
 <span class="keyword">end</span>
-</pre><pre class="codeoutput"> 
-ans =
- 
-2*cos(x)*sin(x) - 6*x
- 
-</pre><h2>The input function is<a name="3"></a></h2><p><img src="differetiate_eq52626.png" alt="$$ sin^{2}(x) - 3x^{2} $$"></p><h2>The code executed in the command window is<a name="5"></a></h2><pre class="language-matlab">syms <span class="string">x</span>;
-f = sin(x).^2 - 3*(x*x);
-differetiate(f)
 </pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Differentiation of a function
-%%
-%%
-% In calculus, the differential represents the principal part of the change in a function $$ y = f(x) $$ with respect to changes in the independent variable. The differential dy is defined by
-%
-% $$ dy = f'(x)\,dx, $$
-% where $$ f'(x) $$ is the derivative of f with respect to x, and dx is an additional real variable (so that _dy_ is a function of x and _dx_). The notation is such that the equation
-%
-% $$ dy = \frac{dy}{dx}\, dx $$
-% holds, where the derivative is represented in the Leibniz notation $$ dy/dx, $$ and this is consistent with regarding the derivative as the quotient of the differentials. One also writes
-%
-% $$ df(x) = f'(x)\,dx. $$
 %%
 function output = differetiate(f)
 % This is used to differentiate a function
@@ -711,14 +672,6 @@ function output = differetiate(f)
 % By CET Mechanical Section A 2017 batch
     output = diff(f);
 end
-%% The input function is
-% $$ sin^{2}(x) - 3x^{2} $$
-%%
-%% The code executed in the command window is
-%   syms x;
-%   f = sin(x).^2 - 3*(x*x);
-%   differetiate(f)
-%%
 
 ##### SOURCE END #####
 --></body></html>
