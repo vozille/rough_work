@@ -1,0 +1,8 @@
+**Minimize :** $ (Ax + B) - (Cy + D) $ <br><br>
+Such that: <br>
+$ x \geqslant 0 $ <br>
+$ y \geqslant 0 $
+
+$ x,y $ have integral solutions. <br>
+
+I just can't figure out if this can be solved by simplex method or not
