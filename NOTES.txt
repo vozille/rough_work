@@ -1,0 +1,1 @@
+chmod 755 folders if you cant access stuff inside
