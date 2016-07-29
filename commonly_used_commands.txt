@@ -1,0 +1,7 @@
+vnstat - net usage
+ncdu - disk usage
+utserver -settingspath /opt/utorrent-server-alpha-v3_3/ - starts utorrent server at that location
+nautilus - alternate file browser
+sudo ./ppa-remove - removes decrapated ppa's
+cal - calender // come on, lol
+./studio.sh - android studio // lame one
