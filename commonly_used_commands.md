@@ -6,6 +6,9 @@ ncdu
 
 # starts utorrent server at the location
 utserver -settingspath /opt/utorrent-server-alpha-v3_3/
+go to http://localhost:8080/gui/
+username : admin
+password : 
 
 # alternate file browser
 nautilus
